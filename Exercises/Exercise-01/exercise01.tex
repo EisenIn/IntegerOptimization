@@ -1,0 +1,99 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fourier,graphicx} 
+\usepackage{amsmath,amsbsy,bm,amssymb,enumerate,mathrsfs}
+ 
+% Encoding settings
+\usepackage[utf8]{inputenc} 
+\usepackage{utf8math}
+\usepackage{anysize} 
+
+
+\newcommand{\smat}[1]{ \big(\begin{smallmatrix} #1 \end{smallmatrix}\big)}
+
+\DeclareMathOperator{\vol}{vol}
+\renewcommand{\epsilon}{\varepsilon}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\cone}{cone}
+
+%\pagestyle{fancyplain}
+
+
+
+\title{Integer Optimization  \\ Problem Set 1 }
+
+\author{ Friedrich Eisenbrand}
+%  \\
+%   EPFL\\
+%   Switzerland\\
+%   {\small \texttt{friedrich.eisenbrand@epfl.ch}}}}
+% } 
+
+
+\date{\today}
+
+
+
+\begin{document}
+
+\maketitle 
+
+
+
+
+\begin{enumerate}[i)] 
+\item Recall that for $X ⊆ ℝ^n$ the convex hull of $X$ is
+
+  \begin{displaymath}
+      \conv(X) = \left\{ ∑_{i=1}^t μ_i x_i ： t ∈ ℕ_+, μ_i ≥0, x_i ∈ X, ∑_{i=1}^t μ_i =1 \right\}.
+  \end{displaymath}
+Show that, for $A,B ⊆ ℝ^n$, one has $\conv(A ∪B) = \conv\left( \conv(A) ∪ \conv(B) \right)$.  
+
+\item
+
+  Recall that for $X ⊆ ℝ^n$, $X_I = \conv( X ∩ ℤ^n)$. 
+  
+  Let $\mathscr{C} = \cone(\{c_1,\dots,c_r\})$ with $c_i ∈ℤ^n$ for $1≤i≤r$. Show that $\mathscr{C}_I = \mathscr{C}$.
+
+  \emph{Hint: Write each element of $\mathscr{C}$ as a convex combination of integer multiples of the $c_i$ and $0$}.
+
+\item In this exercise, you can assume that each cone, $\cone (X)$ with $X ⊆ℝ^n$ finite can be written as $P(A,0) = \{ x ∈ℝ^n ： Ax≤0\}$ for some matrix $A$ and vice versa.
+
+  Prove the Minkowski-Weyl theorem: A set $P ⊆ ℝ^n$ is a polyhedron if and only if there exist finite sets $X,Y ⊆ ℝ^n$ with $P = X+Y$.
+
+  \emph{Hint: Let $P = P(A,b)$. Consider the polyhedral cone $\mathscr{C} = \{ \smat{x\\λ} ∈ℝ^{n+1}  ：Ax ≤ λb, \, λ≥0 \}$. }
+
+\item Let $P = \{ x ∈ ℝ^2 : (1,α)^T x ≤ 0\}$. If $α ∉ Q$, then $P_I$ is not a polyhedron.
+
+\item Let $P ⊆ ℝ^n$ be a rational polyhedron and suppose that $α = \max\{ c^Tx ：x∈ℤ^n, \, Ax≤ b\}$ is bounded. Show that $α =  \max\{ c^Tx ：x ∈ P_I\}$ holds.
+
+
+\item Let $G = (V,E)$ be a complete graph and let $x^* ∈ ℝ^{|E|}_{≥0}$  be given. Show that one can find a \emph{separating} subtour-elimination constraint if there exists one, i.e., a proper  subset $S$ of $V$ with
+  \begin{displaymath}
+    ∑_{e ∈ δ(S)} x^*_e <2. 
+  \end{displaymath}
+
+  \emph{Hint: Minimum cut}. 
+  
+\end{enumerate}
+
+
+
+%\bibliographystyle{abbrv}
+%\bibliography{books,mybib,papers,my_publications}
+
+
+ 
+\end{document}
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
