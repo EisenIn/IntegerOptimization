@@ -45,9 +45,9 @@
 
 
 \begin{enumerate} 
-\item An employment agency wants to find a job for a set $W$  workers. The set of available jobs is $E$. The agency knows whether a worker $i ∈ W$ is qualified for job $j ∈ E$. Describe an integer program to find the maximum number of workers being employed in jobs for which they are qualified. \emph{Hint: Use variables $x_{i,j} ∈ \{0,1\}$ indicating whether worker $i$ was assigned job $j$.}
+\item An employment agency wants to find a job for a set of workers, $W$. The set of available jobs is $E$. The agency knows whether a worker $i ∈ W$ is qualified for job $j ∈ E$. Describe an integer program to find the maximum number of workers being employed in jobs for which they are qualified. \emph{Hint: Use variables $x_{i,j} ∈ \{0,1\}$ indicating whether worker $i$ was assigned job $j$.}
 
-Now, some companies offering jobs, have a maximum number of new hires. For example, the subset $S⊆ E$ of jobs is offered by IBN. IBN can, for budget reasons only hire $5$ new people. Incorporate these additional  constraints into your integer program. 
+Now, some companies offering jobs, have a maximum number of new hires. For example, the subset $S⊆ E$ of jobs is offered by IBN. IBN can, for budget reasons, only hire $5$ new people. Incorporate these additional  constraints into your integer program. 
 \item Recall that for $X ⊆ ℝ^n$ the convex hull of $X$ is
 
   \begin{displaymath}
@@ -64,7 +64,7 @@ Show that, for $A,B ⊆ ℝ^n$, one has $\conv(A ∪B) = \conv\left( \conv(A) �
 
 \item In this exercise, you can assume that each cone, $\cone (X)$ with $X ⊆ℝ^n$ finite can be written as $P(A,0) = \{ x ∈ℝ^n ： Ax≤0\}$ for some matrix $A$ and vice versa.
 
-  Prove the Minkowski-Weyl theorem: A set $P ⊆ ℝ^n$ is a polyhedron if and only if there exist finite sets $X,Y ⊆ ℝ^n$ with $P = X+Y$.
+  Prove the Minkowski-Weyly theorem: A set $P ⊆ ℝ^n$ is a polyhedron if and only if there exist finite sets $X,Y ⊆ ℝ^n$ with $P = X+Y$.
 
   \emph{Hint: Let $P = P(A,b)$. Consider the polyhedral cone $\mathscr{C} = \{ \smat{x\\λ} ∈ℝ^{n+1}  ：Ax ≤ λb, \, λ≥0 \}$. }
 
@@ -80,7 +80,7 @@ Show that, for $A,B ⊆ ℝ^n$, one has $\conv(A ∪B) = \conv\left( \conv(A) �
 
 %   \emph{Hint: Minimum cut}.
 
-\item Consider the triangle $T ⊆ ℝ^2$ with vertices $(0,0), (a,0), (a, γ)$  where $a ∈ ℕ$ and $γ ∈ ℝ_{≥0}$. Show that there exists a set $S⊆ T ∩ℤ^2$ with $|S| = O(\log a)$ such that $T_I = \conv{S}$ holds.  
+\item Consider the triangle $T ⊆ ℝ^2$ with vertices $(0,0), (a,0), (a, γ)$  where $a ∈ ℕ$ and $γ ∈ ℝ_{≥0}$. Show that there exists a set $S⊆ (T ∩ℤ^2)$ with $|S| = O(\log a)$ such that $T_I = \conv{S}$ holds.  
   
 \end{enumerate}
 
