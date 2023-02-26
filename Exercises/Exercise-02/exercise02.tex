@@ -1,0 +1,117 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fourier,graphicx} 
+\usepackage{amsmath,amsbsy,bm,amssymb,enumerate,mathrsfs,xspace}
+ 
+% Encoding settings
+\usepackage[utf8]{inputenc} 
+\usepackage{utf8math}
+\usepackage{anysize} 
+
+
+\newcommand{\smat}[1]{ \big(\begin{smallmatrix} #1 \end{smallmatrix}\big)}
+
+\newcommand{\setR}{\mathbb{R}}
+\newcommand{\setZ}{\mathbb{Z}}
+\newcommand{\setQ}{\mathbb{Q}}
+\newcommand{\setC}{\mathbb{C}}
+\newcommand{\setN}{\mathbb{N}}
+\newcommand{\wt}[1]{\widetilde{#1}}
+\newcommand{\opt}{{\sc 0/1-opt}\xspace}
+\newcommand{\aug}{{\sc 0/1-aug}\xspace}
+\newcommand{\psep}{{\sc 0/1-psep}\xspace}
+\newcommand{\sep}{{\sc 0/1-sep}\xspace}
+\newcommand{\fopt}{{\sc 0/1-testopt\xspace} }
+
+
+\DeclareMathOperator{\vol}{vol}
+\renewcommand{\epsilon}{\varepsilon}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\cone}{cone}
+
+%\pagestyle{fancyplain}
+
+
+
+\title{Integer Optimization  \\ Problem Set 2 }
+
+%\author{ Friedrich Eisenbrand}
+%  \\
+%   EPFL\\
+%   Switzerland\\
+%   {\small \texttt{friedrich.eisenbrand@epfl.ch}}}}
+% } 
+
+
+\date{To be discussed on March 6}
+
+
+
+\begin{document}
+
+\maketitle 
+
+
+
+
+\begin{enumerate} 
+ \item Show that a polyhedron $P = \{ x ∈ ℝ^n ： Ax ≤ b\}$, with $A ∈ ℝ^{m ×n}$ $b∈ ℝ^m$ is a convex set. 
+ \item Prove Carath\'eodory's Theorem: Let $X\subseteq\setR^n$, then for each $x \in \cone(X)$ there exists a set
+  $\wt{X}\subseteq X$ of cardinality at most $n$  such that $x \in
+  \cone(\wt{X})$. The vectors in $\wt{X}$ are linearly independent.
+  \item Let $A \in \setR^{n\times n}$ be a non-singular matrix and let
+  $a_1,\ldots,a_n\in \setR^n$ be the columns of $A$.  Show that
+  $\cone(\{a_1,\ldots,a_n\})$ is the polyhedron $P = \{ y \in \setR^n \colon
+  A^{-1} y\geq0\}$. \label{conv:item:3} Show that $\cone(\{a_1,\ldots,a_k\})$ for
+  $k\leq n$ is the set $P_k = \{y \in \setR^n \colon
+  a_i^{-1} x\geq0, i=1,\ldots,k, \, a_i^{-1}x = 0, i=k+1,\ldots,n\}$, where
+  $a_i^{-1}$ denotes the $i$-th row of $A^{-1}$.
+\item Prove that for a finite set $X\subseteq\setR^n$ the conic hull $\cone(X)$ is closed  and convex.  Find a countably infinite set $X\subset\setR^2$ such that $\cone(X)$ is not closed.
+\item A \emph{vertex} of a polyhedron $P(A,b) ⊆ ℝ^n$  is an element $v ∈ P$ such that there do not exist $v_1, v_2 ∈P$, $v_1 ≠v_2$ with $v = 1/2(v_1+v_2)$. 
+  Show that a polyhedron $P(A,b)$ has a vertex if and only if $\mathrm{rank}(A)=n$.
+\item Let $P = P(A,b)$ be a rational polyhedron (meaning that both $A$ and $b$ can be chosen to be rational). Show that for each $c ∈ ℝ^n$ one has
+  \begin{displaymath}
+    \max\{c^Tx ： x ∈ P ∩ℤ^n \}  = \max\{c^Tx ： x ∈ P_I \}. 
+  \end{displaymath}
+\item Show that each vertex of the polytope that is described by the inequalities
+  \begin{eqnarray*}
+    0 ≤ x_i ≤ 1, & i=1,\dots, n \\
+    ∑_{i=1}^n x_i ≤ β
+  \end{eqnarray*}
+  with $β ∈ ℤ$ is an integral point. Argue that the integer program
+
+  \begin{eqnarray*}
+    \max ∑_{i=1}^n c_i x_i 
+  \end{eqnarray*}
+
+  subject to
+
+  \begin{eqnarray*}
+    0 ≤ x_i ≤ 1, & i=1,\dots, n \\
+    ∑_{i=1}^n 2 ⋅ x_i ≤ n \\
+    x ∈ ℤ^n
+  \end{eqnarray*}
+ can be solved in polynomial time. 
+  
+\end{enumerate}
+
+
+
+%\bibliographystyle{abbrv}
+%\bibliography{books,mybib,papers,my_publications}
+
+
+ 
+\end{document}
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
