@@ -1,0 +1,127 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fourier,graphicx} 
+\usepackage{amsmath,amsbsy,bm,amssymb,enumerate,mathrsfs,xspace}
+ 
+% Encoding settings
+\usepackage[utf8]{inputenc} 
+\usepackage{utf8math}
+\usepackage{anysize} 
+
+
+\newcommand{\smat}[1]{ \big(\begin{smallmatrix} #1 \end{smallmatrix}\big)}
+
+\newcommand{\setR}{\mathbb{R}}
+\newcommand{\setZ}{\mathbb{Z}}
+\newcommand{\setQ}{\mathbb{Q}}
+\newcommand{\setC}{\mathbb{C}}
+\newcommand{\setN}{\mathbb{N}}
+\newcommand{\wt}[1]{\widetilde{#1}}
+\newcommand{\opt}{{\sc 0/1-opt}\xspace}
+\newcommand{\aug}{{\sc 0/1-aug}\xspace}
+\newcommand{\psep}{{\sc 0/1-psep}\xspace}
+\newcommand{\sep}{{\sc 0/1-sep}\xspace}
+\newcommand{\fopt}{{\sc 0/1-testopt\xspace} }
+
+
+\DeclareMathOperator{\vol}{vol}
+\renewcommand{\epsilon}{\varepsilon}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\rank}{rank}
+
+
+%\pagestyle{fancyplain}
+
+
+
+\title{Integer Optimization  \\ Problem Set 3 }
+
+%\author{ Friedrich Eisenbrand}
+%  \\
+%   EPFL\\
+%   Switzerland\\
+%   {\small \texttt{friedrich.eisenbrand@epfl.ch}}}}
+% } 
+
+
+\date{To be discussed on March 13}
+
+
+
+\begin{document}
+
+\maketitle 
+
+
+
+
+\begin{enumerate} 
+\item Let $P,Q ⊆ ℝ^n$ be pointsets.  Show
+  \begin{displaymath}
+    \conv(P) ⊕ \conv(Q) = \conv(P ⊕Q). 
+  \end{displaymath}
+
+\item Pet $P$ and $C$ be  subsets of $ℝ^n$. Show that one has 
+  \begin{displaymath}
+    P_I ⊕ C_I ⊆ (P ⊕ C)_I.
+  \end{displaymath}
+  Does equality hold? 
+\end{enumerate}
+
+\noindent
+The following exercises are deriving the Minkowski-Weyl theorem from \emph{linear programming } theory. % Recall the duality theorem: The linear program $\min\{ c^T y ： A y = b, \, y≥0\}$ is feasible and bounded if and only of the linear program $\max\{ b^T x ： A^T x ≤ c \}$ is feasible and bounded. In this case, the optimal values of both optimization problems  coincide. 
+% We will use this and the separation theorem to show that a finitely generated cone $\cone\{a_1,\dots,a_m\}⊆ ℝ^n$  is polyhedral, i.e. of the form $\{x ∈ ℝ^n ： Cx ≤ 0\}$ for some matrix $C ∈ ℝ^{ℓ×n}$.
+Recall the following fact from linear programming. If $\max\{ c^T x ：x ∈ ℝ^n, \,Ax ≤ b\}$ is feasible and bounded and if $\rank(A) = n$, then there exists an optimal \emph{vertex} solution $x^*$, i.e., $x^*$ satisfies $n$ linear inequalities,  whose left-hand-side vectors are a basis of $ℝ^n$ with equality. 
+
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+\item Let $A ∈ ℝ^{n ×m}$, consider the finitely generated cone $\mathscr{C} = \{ A\,  λ ： λ ∈ ℝ^m_{≥0}\}$ and let $b ∉ \mathscr{C} $. With the separation theorem, there exists a hyperplane $x^T z = β$ such that $x^T b > β$ and $x^T z < β$ for each $z ∈  \mathscr{C}$.
+
+  Show that $β≥0$ (on which side is $0$?)  and  $x^T A ≤ 0$ hold.
+
+\item Next consider the linear program
+  \begin{displaymath}
+     \max\{ b^T x : x ∈ ℝ^n, \,  A^T x ≤ 0, \,  -1 ≤ x ≤ 1\}. 
+   \end{displaymath}
+   Show that this linear program is feasible and bounded ($b ∉ \mathscr{C}$!) with optimal solution value $>0$ and interpret the optimal solution as a hyperplane, separating $b$ from $\mathscr{C}$. 
+ \item Conclude that there is an optimal vertex solution. How many vertex solutions are there at most?
+ \item Conclude that $ \mathscr{C}$ is polyhedral, i.e. there exists a matrix $C ∈ ℝ^{m ×n}$ with $\mathscr{C} = \{ Cx ≤0\}$. How does the matrix $C ∈ ℝ^{m ×n}$ look like. How many rows does it have at most. 
+   
+\end{enumerate}
+Finally, an exercise on dynamic programming. 
+\begin{enumerate}
+  \setcounter{enumi}{6}
+\item 
+  Solve the following knapsack problem by drawing the corresponding directed acyclic graph:
+
+  \begin{displaymath}
+    \max 12x_1 + 10 x_2 + 13 x_3 + 8 x_4 
+  \end{displaymath}
+
+  s.t.
+  \begin{eqnarray*}
+    3x_1 + 5 x_2 + 2 x_3 + 4 x_4 ≤ 10\\
+    x_1,x_2,x_3,x_4 ∈ \{0,1\}. 
+  \end{eqnarray*}
+  
+\end{enumerate}
+
+%\bibliographystyle{abbrv}
+%\bibliography{books,mybib,papers,my_publications}
+
+
+ 
+\end{document}
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
