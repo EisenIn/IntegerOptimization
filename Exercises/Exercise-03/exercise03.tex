@@ -59,12 +59,12 @@
 
 
 \begin{enumerate} 
-\item Let $P,Q ⊆ ℝ^n$ be pointsets.  Show
+\item Let $P,Q ⊆ ℝ^n$ be pointsets.  Show that
   \begin{displaymath}
     \conv(P) ⊕ \conv(Q) = \conv(P ⊕Q). 
   \end{displaymath}
 
-\item Pet $P$ and $C$ be  subsets of $ℝ^n$. Show that one has 
+ Let $P$ and $C$ be  subsets of $ℝ^n$. Show that one has 
   \begin{displaymath}
     P_I ⊕ C_I ⊆ (P ⊕ C)_I.
   \end{displaymath}
@@ -74,12 +74,12 @@
 \noindent
 The following exercises are deriving the Minkowski-Weyl theorem from \emph{linear programming } theory. % Recall the duality theorem: The linear program $\min\{ c^T y ： A y = b, \, y≥0\}$ is feasible and bounded if and only of the linear program $\max\{ b^T x ： A^T x ≤ c \}$ is feasible and bounded. In this case, the optimal values of both optimization problems  coincide. 
 % We will use this and the separation theorem to show that a finitely generated cone $\cone\{a_1,\dots,a_m\}⊆ ℝ^n$  is polyhedral, i.e. of the form $\{x ∈ ℝ^n ： Cx ≤ 0\}$ for some matrix $C ∈ ℝ^{ℓ×n}$.
-Recall the following fact from linear programming. If $\max\{ c^T x ：x ∈ ℝ^n, \,Ax ≤ b\}$ is feasible and bounded and if $\rank(A) = n$, then there exists an optimal \emph{vertex} solution $x^*$, i.e., $x^*$ satisfies $n$ linear inequalities,  whose left-hand-side vectors are a basis of $ℝ^n$ with equality. 
+Recall the following fact from linear programming. If $\max\{ c^T x ：x ∈ ℝ^n, \,Ax ≤ b\}$ is feasible and bounded and if $\rank(A) = n$, then there exists an optimal \emph{vertex} solution $x^*$. I.e., $x^*$ satisfies $n$ linear inequalities - whose left-hand-side vectors are a basis of $ℝ^n$ - with equality. 
 
 
 \begin{enumerate}
-  \setcounter{enumi}{2}
-\item Let $A ∈ ℝ^{n ×m}$, consider the finitely generated cone $\mathscr{C} = \{ A\,  λ ： λ ∈ ℝ^m_{≥0}\}$ and let $b ∉ \mathscr{C} $. With the separation theorem, there exists a hyperplane $x^T z = β$ such that $x^T b > β$ and $x^T z < β$ for each $z ∈  \mathscr{C}$.
+  \setcounter{enumi}{1}
+\item Let $A ∈ ℝ^{n ×m}$, consider the finitely generated cone $\mathscr{C} = \{ A\,  λ ： λ ∈ ℝ^m_{≥0}\}$ and let $b ∉ \mathscr{C} $. With the separation theorem, there exists a hyperplane $\{ y : x^T y = β\}$ such that $x^T b > β$ and $x^T z < β$ for each $z ∈  \mathscr{C}$.
 
   Show that $β≥0$ (on which side is $0$?)  and  $x^T A ≤ 0$ hold.
 
@@ -87,16 +87,15 @@ Recall the following fact from linear programming. If $\max\{ c^T x ：x ∈ ℝ
   \begin{displaymath}
      \max\{ b^T x : x ∈ ℝ^n, \,  A^T x ≤ 0, \,  -1 ≤ x ≤ 1\}. 
    \end{displaymath}
-   Show that this linear program is feasible and bounded ($b ∉ \mathscr{C}$!) with optimal solution value $>0$ and interpret the optimal solution as a hyperplane, separating $b$ from $\mathscr{C}$. 
- \item Conclude that there is an optimal vertex solution. How many vertex solutions are there at most?
+   Show that this linear program is feasible and bounded ($b ∉ \mathscr{C}$!) with optimal solution value $>0$ and interpret the optimal solution as a hyperplane, separating $b$ from $\mathscr{C}$. Conclude that there is an optimal vertex solution. How many vertex solutions are there at most?
  \item Conclude that $ \mathscr{C}$ is polyhedral, i.e. there exists a matrix $C ∈ ℝ^{m ×n}$ with $\mathscr{C} = \{ Cx ≤0\}$. How does the matrix $C ∈ ℝ^{m ×n}$ look like. How many rows does it have at most. 
    
  \end{enumerate}
 
 
 \begin{enumerate}
-  \setcounter{enumi}{6}
-\item Let $\max\{c^Tx ： Ax ≤ b, \, x ∈ ℤ^n\}$ be an integer program with $A ∈ℤ^{m × n }$ and $b ∈ℤ^m$. Show that this integer program is unbounded if and only of the linear programming relaxation (The condition $x ∈ ℤ^n$ is replaced by $x ∈ℝ^n$) is unbounded.
+  \setcounter{enumi}{4}
+\item Let $\max\{c^Tx ： Ax ≤ b, \, x ∈ ℤ^n\}$ be an integer program with $A ∈ℤ^{m × n }$ and $b ∈ℤ^m$. Show that this integer program is unbounded if and only if the linear programming relaxation (The condition $x ∈ ℤ^n$ is replaced by $x ∈ℝ^n$) is unbounded.
 
 
 \item 
