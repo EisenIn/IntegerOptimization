@@ -1,0 +1,151 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fourier,graphicx} 
+\usepackage{amsmath,amsbsy,bm,amssymb,enumerate,mathrsfs,xspace}
+ 
+% Encoding settings
+\usepackage[utf8]{inputenc} 
+\usepackage{utf8math}
+\usepackage{anysize} 
+
+
+\newcommand{\smat}[1]{ \big(\begin{smallmatrix} #1 \end{smallmatrix}\big)}
+
+\newcommand{\setR}{\mathbb{R}}
+\newcommand{\setZ}{\mathbb{Z}}
+\newcommand{\setQ}{\mathbb{Q}}
+\newcommand{\setC}{\mathbb{C}}
+\newcommand{\setN}{\mathbb{N}}
+\newcommand{\wt}[1]{\widetilde{#1}}
+\newcommand{\opt}{{\sc 0/1-opt}\xspace}
+\newcommand{\aug}{{\sc 0/1-aug}\xspace}
+\newcommand{\psep}{{\sc 0/1-psep}\xspace}
+\newcommand{\sep}{{\sc 0/1-sep}\xspace}
+\newcommand{\fopt}{{\sc 0/1-testopt\xspace} }
+
+
+\DeclareMathOperator{\vol}{vol}
+\renewcommand{\epsilon}{\varepsilon}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\rank}{rank}
+
+
+%\pagestyle{fancyplain}
+
+
+
+\title{Integer Optimization  \\ Problem Set 4 }
+
+%\author{ Friedrich Eisenbrand}
+%  \\
+%   EPFL\\
+%   Switzerland\\
+%   {\small \texttt{friedrich.eisenbrand@epfl.ch}}}}
+% } 
+
+
+\date{To be discussed on March 20 and after}
+
+
+
+\begin{document}
+
+\maketitle 
+
+\noindent 
+Consider an integer program in so-called \emph{equation standard form}
+  \begin{equation}\label{eq:1}
+    \max \{ c^T x : Ax = b, \, x≥0, \, x ∈ ℤ^n\}, 
+  \end{equation}
+  with $A ∈ℤ^{m ×n}$ and $b∈ℤ^m$ and let $Δ$ be an upper bound on the
+  absolute value of coefficients of $A$ and $b$. In this exercise, we
+  will show that, if the IP is feasible and bounded, then there exists
+  an optimal solution $x^*$ with $\|x^*\|_∞ ≤ (m Δ)^{O(m)}$.  To this end,
+  recall the \emph{Hadamard bound } $|\det(B)| ≤ ∏_i \|b_i\|_2$ and
+  the \emph{matrix inversion formula} $B^{-1} = \wt{B} / \det(B)$,
+  where $B ∈ℝ^{m × m}$ is invertible $\wt{B}$ is the \emph{cofactor
+    matrix} (or its transpose) and the $b_i$ re the columns of $B$.
+
+\begin{enumerate} 
+\item Let $B ∈ℤ^{m × m}$ be a full-rank matrix with $\|b_{ij}\|_∞ ≤ Δ$
+  for each $i,j$. Show that $B^{-1} = C / D$, where
+  $0< D ≤ (m ⋅Δ)^{m/2}$ is an integer and $C ∈ ℤ^{m ×m}$ is an integer
+  matrix with $|c_{ij}| ≤ (m ⋅Δ)^{m/2}$ for each $i,j$.
+\item Let $J ⊆ \{1,\dots,n\}$ be a nonempty index set such that the
+  columns $a_j, \, j ∈ J$ are linearly dependent. Show that there
+  exists $g ∈ \ker(A) ∩ ℤ^n ⧹\{0\}$ such that
+  $\|g\|_∞ ≤ (m Δ)^{2m}$
+  and $g_k = 0$ for each $k ∉ J$.\footnote{A generous upper bound.} 
+\item
+  Let $x^* ∈ℤ^{n}_{≥0}$ be an optimal solution of \eqref{eq:1}. Let $J ⊆ \{1,\dots,n\}$ be the set of indices  with $x^*_j > (m Δ)^{2m}$. Show that there exists an optimal solution $x^*$ for which the corresponding columns $a_j, \, j ∈ J$ are linearly independent.
+
+  \emph{Hint: This is a bit like in the proof of the Carathéodory Theorem. It can be considered to be an integer version of it. } 
+
+\item  How large can the number of columns $n$ be, if there are no repetitive columns?
+\item Show that there exists an absolute constant $K$ such that there exists an optimal solution $x^*$ that satisfies  $\|x^*\|_∞ ≤ (m Δ)^{K \, m}$. 
+\end{enumerate}
+
+\newpage
+
+\noindent 
+The next exercise shows how to reduce a problem 
+\begin{equation} 
+  \label{eq:2}
+  A x = b, x ∈ \{0,1\}^n   
+\end{equation}
+to the solution of one equation
+\begin{equation}
+  \label{eq:3}
+   a^T x = β, x ∈ \{0,1\}^n,   
+ \end{equation}
+ where $A ∈ℤ^{m ×n}$ $b ∈ℤ^m$, $a ∈ℤ^n$ and $β ∈ℤ$. To simplify the reasoning, we assume that each entry of $A$ is $± 1$ or $0$.
+ Let $λ ∈ \{ 0,\dots,M\} ^m$,  $a^T = λ^T A$ and $β = λ^T b$. Furthermore, let $S_1, S_2 ⊆ \{0,1\}^n$ be the set of solutions  of~\eqref{eq:2} and \eqref{eq:3} respectively.
+
+ 
+ \begin{enumerate}
+   \setcounter{enumi}{5}
+ \item  Show that $S_1 ⊆ S_2$ holds.
+ \item An element $x^* ∈ \{0,1\}^n$ belongs to $S_2 ⧹S_1$ if and only if $λ ⊥ (A x^* -b)$.
+ \item Suppose that $λ $ is chosen i.i.d. at random from $\{ 0,\dots,M\}$ and that $x^* ∈ \{0,1\}^n ⧹S_1$. Show that
+   \begin{displaymath}
+     P\left[ λ ⊥ (A x^* -b) \right] ≤ 1/M. 
+   \end{displaymath}
+ \item Show that the number of vectors $(A x^* -b), \, x^* ∈\{0,1\}^n$ is bounded by $(2 n +1)^m$.
+ \item Show 
+   \begin{displaymath}
+     P \left[ S_2 ≠ S_2\right] ≤ (2 n +1)^m / M. 
+   \end{displaymath}
+ \item For $M = (2 n +1)^{2m}$,
+   \begin{displaymath}
+     P \left[ S_2 ≠ S_2\right] ≤ \frac{1}{2n}^m. 
+   \end{displaymath}
+   How many bits has the number $M$ then, if it is represented in a computer?
+   \end{enumerate}
+
+ \noindent 
+ This is a simple randomized reduction. There are also simple deterministic reductions. Such a reduction shows that the knapsack problem is NP hard. For the following exercise you can assume the existence of such a deterministic reduction with $S_1 = S_2$ guaranteed.
+ \begin{enumerate}
+   \setcounter{enumi}{12}
+\item    Show that the \emph{knapsack problem} is NP hard, by providing a reduction from SAT. 
+ \end{enumerate}
+ 
+ 
+
+%\bibliographystyle{abbrv}
+%\bibliography{books,mybib,papers,my_publications}
+
+
+ 
+\end{document}
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
