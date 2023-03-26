@@ -1,0 +1,146 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fourier,graphicx} 
+\usepackage{amsmath,amsbsy,bm,amssymb,enumerate,mathrsfs,xspace}
+ 
+% Encoding settings
+\usepackage[utf8]{inputenc} 
+\usepackage{utf8math}
+\usepackage{anysize} 
+
+
+\newcommand{\smat}[1]{ \big(\begin{smallmatrix} #1 \end{smallmatrix}\big)}
+
+\newcommand{\setR}{\mathbb{R}}
+\newcommand{\setZ}{\mathbb{Z}}
+\newcommand{\setQ}{\mathbb{Q}}
+\newcommand{\setC}{\mathbb{C}}
+\newcommand{\setN}{\mathbb{N}}
+\newcommand{\wt}[1]{\widetilde{#1}}
+\newcommand{\wb}[1]{\overline{#1}}
+\newcommand{\opt}{{\sc 0/1-opt}\xspace}
+\newcommand{\aug}{{\sc 0/1-aug}\xspace}
+\newcommand{\psep}{{\sc 0/1-psep}\xspace}
+\newcommand{\sep}{{\sc 0/1-sep}\xspace}
+\newcommand{\fopt}{{\sc 0/1-testopt\xspace} }
+
+
+\DeclareMathOperator{\vol}{vol}
+\renewcommand{\epsilon}{\varepsilon}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\poly}{poly}
+\DeclareMathOperator{\size}{size}
+\DeclareMathOperator{\rank}{rank}
+
+
+%\pagestyle{fancyplain}
+
+
+
+\title{Integer Optimization  \\ Problem Set 5 }
+
+%\author{ Friedrich Eisenbrand}
+%  \\
+%   EPFL\\
+%   Switzerland\\
+%   {\small \texttt{friedrich.eisenbrand@epfl.ch}}}}
+% } 
+
+\date{Working session: March 27, Presentations: April 3}
+
+
+
+\begin{document}
+
+\maketitle 
+
+\noindent
+In this problem set, we will understand the basic principle of  the state-of-the-art method to solve integer programming problems
+\begin{equation}
+  \label{eq:1}
+  \max\{c^T x ： Ax = b, \, 0 ≤ x ≤ u, \, x ∈ℤ^n\},
+\end{equation}
+where $A ∈ℤ^{m × n }$, $b ∈ ℤ^m$, $u ∈ℕ^n$ and $c ∈ℤ^n$. The running time of the method will be
+\begin{equation}
+  \label{eq:2}
+  (mΔ +1)^{O(m^2)}  \poly(\size(b)+\size(u)), 
+\end{equation}
+where $a_{ij} ≤Δ$ for each $i,j$. Whether this quadratic dependence on $m$ in the exponent can be improved or not, is a prominent open problem.  
+
+\begin{enumerate}[i)]
+\item Let $x ∈ℤ^n \setminus \{0\}$ satisfy $A x = 0$ and $x≥0$.  Use the Steinitz lemma to conclude that there exists a $y  ∈ℤ^n \setminus \{0\}$ with
+  $A y = 0$ and 
+  \begin{enumerate}[1)]
+  \item  $0≤ y ≤ x$ (component-wise), and
+  \item $\|y\|_1 ≤ (mΔ+1)^{O(m)}$.  
+  \end{enumerate}
+\item \label{item:4} 
+  For two vectors $x,y ∈ℤ^n$ we define the partial order $y \sqsubseteq x$ if for each $i$, $y_i ⋅x_i ≥ 0$ and $|y_i| ≤ |x_i|$ hold. Let $x ∈ℤ^n \setminus \{0\}$ satisfy $A x = 0$. Conclude that there exists a  $y   ∈ℤ^n \setminus \{0\}$ with
+  \begin{enumerate}[1)]
+  \item  $A y = 0$, \label{item:1}
+  \item  $ y \sqsubseteq  x$, and \label{item:2}
+  \item $\|y\|_1 ≤ (mΔ+1)^{O(m)}$.   \label{item:3}
+  \end{enumerate}
+
+\item Let $\wb{x},x^* ∈ℤ^n$  be an optimal  and feasible solution of~\eqref{eq:1} respectively. Show that the difference $\wb{x}-x^*$ can be written as a sum
+  \begin{displaymath}
+    \wb{x}-x^* = ∑_{i ∈I} y_i, \text{ where } I \text{ is a finite index set and }  
+  \end{displaymath}
+  each $y_i$ satisfies \label{item:6}
+  \begin{enumerate}[1)]
+  \item  $A y_i = 0$, \label{item:1}
+  \item  $ y_i \sqsubseteq  \wb{x}-x^*$, and \label{item:2}
+  \item $\|y_i\|_1 ≤ (mΔ+1)^{O(m)}$.   \label{item:3} 
+  \end{enumerate}
+
+
+\item Show that a feasible solution $x^*$ of~\eqref{eq:1} is an optimal solution, if and only if the optimal value of the following integer program is $0$.
+  \begin{displaymath}
+    \begin{array}{ll}
+      \max & c^T x  \\ 
+      \mathrm{s.t.} & \\
+           & A x = 0 \\
+           & 0 ≤ x + x^* ≤ u \\
+           & \|x\|_1 ≤ (mΔ +1)^{O(m)} 
+    \end{array}
+  \end{displaymath} \label{item:5}
+
+\item Design a dynamic program that solves the integer optimization problem in \ref{item:5}) in the running time~\eqref{eq:2}. 
+
+\item   Again, let  $\wb{x},x^* ∈ℤ^n$  be an optimal  and feasible solution of~\eqref{eq:1} respectively. Referring to \ref{item:6}) show that there exists a subset $\wt{I} ⊆ I$ of size at most $n$ and $μ_i ≥0$, $i ∈ \wt{I}$ with
+  \begin{displaymath}
+    \wb{x}-x^* = ∑_{i ∈\wt{I}} μ_i y_i. 
+  \end{displaymath}
+  \hfill \emph{Hint: Carathéodory's Theorem} 
+
+\item Let $D = c^T ( \wb{x}-x^*)$. Show that there exists a $i ∈ \wt{I}$ and a $k∈ ℕ$ such that $x^* + 2^k y_i$ is feasible and
+  \begin{displaymath}
+    c^T  (\wb{x}- (x^* + 2^k y_i)) ≤ D (1 - 1/(4n)) 
+  \end{displaymath}
+  holds.
+
+\item Show how to find such a $y_i$ in the running time~\eqref{eq:1}.
+\item Show how to solve the integer program~\eqref{eq:1} in time~\eqref{eq:1}. 
+  
+\end{enumerate}
+
+ 
+
+%\bibliographystyle{abbrv}
+%\bibliography{books,mybib,papers,my_publications}
+
+
+ 
+\end{document}
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
