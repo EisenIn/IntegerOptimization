@@ -1,0 +1,93 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fourier,graphicx} 
+\usepackage{amsmath,amsbsy,bm,amssymb,enumerate,mathrsfs,xspace}
+ 
+% Encoding settings
+\usepackage[utf8]{inputenc} 
+\usepackage{utf8math}
+\usepackage{anysize} 
+
+
+\newcommand{\smat}[1]{ \big(\begin{smallmatrix} #1 \end{smallmatrix}\big)}
+
+\newcommand{\setR}{\mathbb{R}}
+\newcommand{\setZ}{\mathbb{Z}}
+\newcommand{\setQ}{\mathbb{Q}}
+\newcommand{\setC}{\mathbb{C}}
+\newcommand{\setN}{\mathbb{N}}
+\newcommand{\wt}[1]{\widetilde{#1}}
+\newcommand{\wb}[1]{\overline{#1}}
+\newcommand{\opt}{{\sc 0/1-opt}\xspace}
+\newcommand{\aug}{{\sc 0/1-aug}\xspace}
+\newcommand{\psep}{{\sc 0/1-psep}\xspace}
+\newcommand{\sep}{{\sc 0/1-sep}\xspace}
+\newcommand{\fopt}{{\sc 0/1-testopt\xspace} }
+
+
+\DeclareMathOperator{\vol}{vol}
+\renewcommand{\epsilon}{\varepsilon}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\poly}{poly}
+\DeclareMathOperator{\size}{size}
+\DeclareMathOperator{\rank}{rank}
+
+
+%\pagestyle{fancyplain}
+
+
+
+\title{Integer Optimization  \\ Problem Set 6 }
+
+%\author{ Friedrich Eisenbrand}
+%  \\
+%   EPFL\\
+%   Switzerland\\
+%   {\small \texttt{friedrich.eisenbrand@epfl.ch}}}}
+% } 
+
+\date{Presentations: May 1}
+
+
+
+\begin{document}
+
+\maketitle 
+
+\begin{enumerate}[i)]
+\item  Consider a line-segment  $ℓ = \{ d λ ： λ ∈ [a,b]\} ⊆ ℤ^2 $ with $d ∈ℤ^2 \setminus \{0\}$ and $a,b ∈ℚ$. Use extended the euclidean algorithm to decide $ℓ ∩ ℤ^2 = \emptyset$ in polynomial time in $\size(d) + \size(a) + \size(b)$.
+\item Consider the problem of deciding $ K ∩ ℤ^n = \emptyset$ for a convex body $K⊆ℝ^n$ and let $a ∈ℤ^n$ and $β ∈ ℤ$. Show that the problem
+  \begin{displaymath}
+     K ∩ \{x ∈ ℝ^n ：a^Tx = β\} ∩  ℤ^n = \emptyset \, ?
+   \end{displaymath}
+   can be understood as a problem $ K' ∩ ℤ^{n-1} = \emptyset$ for some convex body $K' ⊆ ℝ^{n-1}$. If $K$  is a polytope $K = \{ x ∈ ℝ^n ： Ax ≤ b \}$ for some $A ∈ ℝ^{m ×n}$ and $b ∈ ℝ^m$, what is a description of the polytope $K'$?
+ \item Let $a_1,\dots,a_n$ be a basis of the lattice $Λ ⊆ ℝ^n$, then 
+   \begin{displaymath}
+     μ(Λ) ≤ \frac{1}{2}∑_{i=1}^n \|a_i\|_2.    
+   \end{displaymath}
+
+ \item Let $a_1,\dots,a_n$ be a basis of the lattice $Λ ⊆ ℝ^n$. Let $Λ' = \{ π(v) ： v ∈ Λ\}$, where $π(x) = x - 〈x,a_1 〉 〈a_1,a_1 〉 a_1$ is the projection of $x$ into the orthogonal complement of $a_1$.
+
+   Show that $Λ'$ is a $n-1$-dimensional lattice (in the hyperplane $a_1^T x = 0$). What is $\det(Λ')$? 
+\end{enumerate}
+
+
+
+%\bibliographystyle{abbrv}
+%\bibliography{books,mybib,papers,my_publications}
+
+
+ 
+\end{document}
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
