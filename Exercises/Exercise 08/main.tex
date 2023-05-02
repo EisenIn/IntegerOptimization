@@ -20,8 +20,14 @@
 \maketitle
 
 \subsection*{Exercise 1}
- Let $\Lambda \subseteq \mathbb{R}^n$ a full rank lattice with basis $b_1, ... , b_n$. A non-zero lattice vector $v$ is said to be primitive if $v$ is not a multiple of any other lattice vector, i.e. $v \neq kw$ for any $w \in \Lambda$ and any $k \in \mathbb{N}_{\geq 2}$. Show that any primitive lattice vector $v$ can be extended to a basis of $\Lambda$, i.e. there are lattice vectors $\tilde{b_2}, ... , \tilde{b_n}$ so that $v, \tilde{b_2}, ... , \tilde{b_n}$ is a basis of $\Lambda$. \\
-\textit{Hint: This is a question about unimodular matrices. Write $v = \alpha_1 b_1 + ... + \alpha_n b_n$. Using the Euclidean algorithm, show that there exists a unimodular matrix $U \in \mathbb{Z}^{n\times n}$ such that $(\alpha_1, · · · , \alpha_n) \cdot U = (1, 0, ... , 0)$. Observe each operation of the Euclidean algorithm only adds / subtracts multiples of some number to / from another number - in the matrix world, this operations corresponds to a unimodular matrix. It may be useful to show that gcd$(\alpha_1, ... , \alpha_n) = 1$. Finally, argue that the columns of the matrix $(b_1, b_2, ... , b_n)\cdot U^{-T}$ form a basis of $\Lambda$ and its first column is v.}
+ Let $\Lambda \subseteq \mathbb{R}^n$ a full rank lattice with basis $b_1, ... , b_n$. A non-zero lattice vector $v$ is said to be primitive if $v$ is not 
+ a multiple of any other lattice vector, i.e. $v \neq kw$ for any $w \in \Lambda$ and any $k \in \mathbb{N}_{\geq 2}$. Show that any primitive lattice 
+ vector $v$ can be extended to a basis of $\Lambda$, i.e. there are lattice vectors 
+ $\tilde{b_2}, ... , \tilde{b_n}$ so that $v, \tilde{b_2}, ... , \tilde{b_n}$ is a basis of $\Lambda$. \\
+\textit{Hint: This is a question about unimodular matrices. Write $v = \alpha_1 b_1 + ... + \alpha_n b_n$. Using the Euclidean algorithm, show that there 
+exists a unimodular matrix $U \in \mathbb{Z}^{n\times n}$ such that $(\alpha_1, · · · , \alpha_n) \cdot U = (1, 0, ... , 0)$. Observe each operation of the 
+Euclidean algorithm only adds / subtracts multiples of some number to / from another number - in the matrix world, this operations corresponds to a 
+unimodular matrix. It may be useful to show that gcd$(\alpha_1, ... , \alpha_n) = 1$. Finally, argue that the columns of the matrix $(b_1, b_2, ... , b_n)\cdot U^{-T}$ form a basis of $\Lambda$ and its first column is v.}
 
 
 \subsection*{Exercise 2}
