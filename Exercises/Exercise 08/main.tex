@@ -6,8 +6,12 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{amsfonts}
-\usepackage{enumitem}
+\usepackage{enumerate}
+\usepackage[utf8]{inputenc} 
+\usepackage{utf8math}
+\usepackage{anysize} 
 \usepackage{xcolor}
+\usepackage{fourier}
 \newcommand{\innerprod}[1]{\left\langle #1 \right\rangle}
 \newcommand\norm[1]{\left\lVert#1\right\rVert}
 \def\RR{\mathbb{R}}
@@ -19,47 +23,55 @@
 
 \maketitle
 
-\subsection*{Exercise 1}
+
+\begin{enumerate}[i)]
+\item 
  Let $\Lambda \subseteq \mathbb{R}^n$ a full rank lattice with basis $b_1, ... , b_n$. A non-zero lattice vector $v$ is said to be primitive if $v$ is not 
  a multiple of any other lattice vector, i.e. $v \neq kw$ for any $w \in \Lambda$ and any $k \in \mathbb{N}_{\geq 2}$. Show that any primitive lattice 
  vector $v$ can be extended to a basis of $\Lambda$, i.e. there are lattice vectors 
- $\tilde{b_2}, ... , \tilde{b_n}$ so that $v, \tilde{b_2}, ... , \tilde{b_n}$ is a basis of $\Lambda$. \\
-\textit{Hint: This is a question about unimodular matrices. Write $v = \alpha_1 b_1 + ... + \alpha_n b_n$. Using the Euclidean algorithm, show that there 
+ $\tilde{b_2}, ... , \tilde{b_n}$ so that $v, \tilde{b_2}, ... , \tilde{b_n}$ is a basis of $\Lambda$.
+
+ 
+\emph{Hint: This is a question about unimodular matrices. Write $v = \alpha_1 b_1 + ... + \alpha_n b_n$. Using the Euclidean algorithm, show that there 
 exists a unimodular matrix $U \in \mathbb{Z}^{n\times n}$ such that $(\alpha_1, · · · , \alpha_n) \cdot U = (1, 0, ... , 0)$. Observe each operation of the 
 Euclidean algorithm only adds / subtracts multiples of some number to / from another number - in the matrix world, this operations corresponds to a 
 unimodular matrix. It may be useful to show that gcd$(\alpha_1, ... , \alpha_n) = 1$. Finally, argue that the columns of the matrix $(b_1, b_2, ... , b_n)\cdot U^{-T}$ 
 form a basis of $\Lambda$ and its first column is v.}
 
 
-\subsection*{Exercise 2}
-A set $\Lambda \subseteq \RR^d$ is an additive subgroup if
-\begin{enumerate}
-    \item $0 \in \Lambda$
-    \item $x+y \in \Lambda $ for any two $x, y \in \Lambda$
-    \item $-x \in \Lambda$ for any $x \in \Lambda$
-\end{enumerate}
-Furthermore, $\Lambda$ is called discrete provided there is some $\epsilon > 0$ so that the euclidean ball with radius $\epsilon$
-centered at 0 does not contain any point of $\Lambda$ except $0$, i.e. $B(0,\epsilon) \cap \Lambda = 0$.
-Show that a discrete additive subgroup of $\RR^2$
-is a lattice (possesses a basis). \\
-\textit{Hint: pick a vector $v \in \Lambda$ that is not a multiple of another element (why does this exist?) and some other
-vector $w$ that is closest to the span of $v$ (why is there a closest?)}
+\item Let $Λ ⊆\mathbb{R}^n$ be a lattice and $u ∈ Λ \setminus \{0\}$ be a shortest vector w.r.t. the $\ell_2$-norm. For $x \in \mathbb{R}^n$ we let
+  \begin{displaymath}
+    π(x) = x - (x^Tv / v^Tv )\, v
+  \end{displaymath}
+  be the projection of $x$ and we define $Λ_1 = π(Λ)$ as well as $Λ_1^* = \{ y \in \mathbb{R}^n \colon y \perp v, \, \forall x ∈ Λ_1 \colon y^T x \in \mathbb{Z}\}$.
 
-\subsection*{Exercise 3}
+  Prove or provide a counterexample to the following:
+  \begin{displaymath}
+    Λ_1^* = π(Λ^*).  
+  \end{displaymath}
+
+  \hfill \emph{This is Edwin's question!}
+
+
+\item 
 Let $\Lambda \subseteq \RR^n$ be a full rank lattice. Assume $b_1,... ,b_n \in \Lambda$ are linearly independent and that minimize
 $|det(b_1,... ,b_n)|$ over all n linearly independent lattice vectors. Prove that $b_1,... ,b_n$ is a basis of $\Lambda$.
 
-\subsection*{Exercise 4}
+\item 
 Let $B \in \mathbb{Q}^{n\times n}$ be a lattice basis that consists of pairwise orthogonal vectors. Prove that the shortest vector of $\Lambda(B)$ is the shortest column vector of B.
 
-\subsection*{Exercise 5}
+\item 
 Let $\Lambda \subset \RR^n$ be a lattice. Recall that the dual lattice $\Lambda^\ast$ is defined by $\Lambda^\ast = \{ y \in \mathbb{R}^n : y^Tv \in \mathbb{Z} \quad \forall v \in \Lambda\}$. \\
 Let $x \in \RR^d$ a vector. Prove that for every $v \in \Lambda^\ast \backslash \{0\}$ we have that  
 $$\frac{\{\langle v, x \rangle \}}{\Vert v \Vert} \leq dist(x, \Lambda)$$
 where $\{r\} := |\lceil r \rfloor - r|$ is defined to be the distance from $r$ to the closest integer.
-
-
+\end{enumerate}
 
     
 
 \end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
