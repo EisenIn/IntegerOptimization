@@ -1,0 +1,113 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fourier,graphicx} 
+\usepackage{amsmath,amsbsy,bm,amssymb,enumerate,mathrsfs,xspace}
+ 
+% Encoding settings
+\usepackage[utf8]{inputenc} 
+\usepackage{utf8math}
+\usepackage{anysize} 
+
+
+\newcommand{\smat}[1]{ \big(\begin{smallmatrix} #1 \end{smallmatrix}\big)}
+
+\newcommand{\setR}{\mathbb{R}}
+\newcommand{\setZ}{\mathbb{Z}}
+\newcommand{\setQ}{\mathbb{Q}}
+\newcommand{\setC}{\mathbb{C}}
+\newcommand{\setN}{\mathbb{N}}
+\newcommand{\wt}[1]{\widetilde{#1}}
+\newcommand{\wb}[1]{\overline{#1}}
+\newcommand{\opt}{{\sc 0/1-opt}\xspace}
+\newcommand{\aug}{{\sc 0/1-aug}\xspace}
+\newcommand{\psep}{{\sc 0/1-psep}\xspace}
+\newcommand{\sep}{{\sc 0/1-sep}\xspace}
+\newcommand{\fopt}{{\sc 0/1-testopt\xspace} }
+
+
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\vor}{\mathscr{V}}
+\renewcommand{\epsilon}{\varepsilon}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\poly}{poly}
+\DeclareMathOperator{\size}{size}
+\DeclareMathOperator{\rank}{rank}
+
+
+%\pagestyle{fancyplain}
+
+
+
+\title{Integer Optimization  \\ Problem Set 9 }
+
+%\author{ Friedrich Eisenbrand}
+%  \\
+%   EPFL\\
+%   Switzerland\\
+%   {\small \texttt{friedrich.eisenbrand@epfl.ch}}}}
+% } 
+
+\date{Presentations: May 15}
+
+
+
+\begin{document}
+
+\maketitle 
+
+
+
+
+\newcounter{carry}
+\begin{enumerate}[i)]
+\item Let $B ∈ ℝ^{n ×n}$ be a non-singular lattice. The \emph{orthogonality defect} of $B$ is $γ = ∏_{i-1}^n  \|b_i\| / |\det(B)|$, where $b_i$ is the $i$-th column of $B$.
+
+  Show that the orthogonality defect of an LLL-reduced lattice basis $B$ is bounded by $2^{n^2 / 2}$.
+\item Show how to retrieve a shortest nonzero vector of a lattice $Λ(B) ⊆ℝ^n$ in time $(2 γ+1)^n$, where $γ$ is the orthogonality defect of $B$.
+Conclude that the shortest vector problem for a lattice $Λ$ spanned by  $B ∈ℤ^{n × n}$ can be solved in time $2^{O(n^3)}$ times a polynomial in the size of $B$. 
+
+\item Let $Λ ⊆ ℝ^n$ be  a lattice. The \emph{Voronoi cell} of $Λ$ is the set of points
+  \begin{displaymath}
+    \vor(Λ) = \{x ∈ ℝ^n ： ∀ v ∈ Λ ：  \|x\| ≤ \|x-v \| \}.  
+  \end{displaymath}
+  Show that $\vor(Λ) $ is a polytope.
+
+\item Let $Λ ⊆ℝ^n$ be a lattice.  Show that the number of lattice points of euclidean norm bounded by $R$ is at most
+  \begin{displaymath}
+     \left(\frac{R+ ρ(Λ)} { ρ(Λ)} \right) ^n. 
+  \end{displaymath}
+  
+\item Show that $\vor(Λ)$ can be described by $2^{O(n)}$ inequalities.
+
+  \hfill   \emph{Hint: Consider parities $\pmod{2}$.}
+\item Use Minkowski's theorem to show the following result of Dirichlet:
+
+  Let $Q ≥ 1$ be a real number and let $α_1,\dots ,α_n ∈ ℝ$. There exists an integer $q$ and integers $p_1 , \dots , p_n$ with
+  \begin{enumerate}[a)]
+  \item 
+    $1≤ q ≤ Q^n$  and
+    \item 
+      $|q ⋅ α_i − p_i| ≤ 1/Q$ for $i = 1,\dots,n$.
+    \end{enumerate}
+    
+\end{enumerate} 
+
+
+%\bibliographystyle{abbrv}
+%\bibliography{books,mybib,papers,my_publications}
+
+
+ 
+\end{document}
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
