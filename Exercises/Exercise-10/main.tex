@@ -1,0 +1,165 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fourier,graphicx} 
+\usepackage{amsmath,amsbsy,bm,amssymb,enumerate,mathrsfs,xspace}
+ 
+% Encoding settings
+\usepackage[utf8]{inputenc} 
+\usepackage{utf8math}
+\usepackage{anysize} 
+
+
+\newcommand{\smat}[1]{ \big(\begin{smallmatrix} #1 \end{smallmatrix}\big)}
+\documentclass[11pt,a4paper]{article}
+\usepackage{fourier,graphicx} 
+\usepackage{amsmath,amsbsy,bm,amssymb,enumerate,mathrsfs,xspace}
+ 
+% Encoding settings
+\usepackage[utf8]{inputenc} 
+\usepackage{utf8math}
+\usepackage{anysize} 
+
+
+\newcommand{\smat}[1]{ \big(\begin{smallmatrix} #1 \end{smallmatrix}\big)}
+
+\newcommand{\setR}{\mathbb{R}}
+\newcommand{\setZ}{\mathbb{Z}}
+\newcommand{\setQ}{\mathbb{Q}}
+\newcommand{\setC}{\mathbb{C}}
+\newcommand{\setN}{\mathbb{N}}
+\newcommand{\wt}[1]{\widetilde{#1}}
+\newcommand{\wb}[1]{\overline{#1}}
+\newcommand{\opt}{{\sc 0/1-opt}\xspace}
+\newcommand{\aug}{{\sc 0/1-aug}\xspace}
+\newcommand{\psep}{{\sc 0/1-psep}\xspace}
+\newcommand{\sep}{{\sc 0/1-sep}\xspace}
+\newcommand{\fopt}{{\sc 0/1-testopt\xspace} }
+
+
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\vor}{\mathscr{V}}
+\renewcommand{\epsilon}{\varepsilon}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\poly}{poly}
+\DeclareMathOperator{\size}{size}
+\DeclareMathOperator{\rank}{rank}
+
+
+%\pagestyle{fancyplain}
+
+
+
+\title{Integer Optimization  \\ Problem Set 10 }
+
+%\author{ Friedrich Eisenbrand}
+%  \\
+%   EPFL\\
+%   Switzerland\\
+%   {\small \texttt{friedrich.eisenbrand@epfl.ch}}}}
+% } 
+
+\date{Presentations: May 22}
+
+
+
+\begin{document}
+
+\maketitle 
+
+
+
+
+\newcounter{carry}
+\begin{enumerate}[i)]
+\item For a lattice $Λ$ let us write $SVP(Λ)$ and $CVP(Λ,t)$ as the values of the shortest vector and closest vector problems. We have seen in an earlier exercise that for any lattice $Λ$, the number of lattice vectors of length, say $2\cdot SVP(Λ)$ is bounded by $2^{O(n)}$. Here we want to show that this is not true anymore
+for CVP. To be precise, for any function $f(n)$, construct a lattice in $n$ dimensions and a point $t$ so that
+$$|\{x ∈ Λ | \Vert x − t\Vert_2 ≤ 2 \cdot CVP(Λ,t)\}| ≥ f (n)$$
+
+
+
+
+\item Let $t ∈ \setR^n$ and $L ⊆ \setR^n$ a lattice. The goal of the closest vector problem (CVP) is to find a closest lattice
+vector to $t$, e.g. finding $c ∈ L$ such that $\Vert t − c\Vert_2 = \min_{w∈L} \Vert t − w\Vert_2$. Assume that you are given a vector $u ∈ L^\ast$ (the dual of L) such that $\Vert u\Vert_2 > 2 \cdot \Vert t\Vert_2$. Find a lattice $L' ⊆ \setR^{n−1}$ such that finding the closest vector to $t$ on $L$ is equivalent to
+solving a closest vector problem on $L'$ and prove why this is so.
+
+\item Given a lattice $Λ$, we denote by $λ_k(Λ) ∈ \setR_{>0}$ the minimal number so that $B(0, λ_k)$ contains $k$ linearly
+independent lattice vectors. Show that for any lattice $Λ ⊆ \setR^n,  λ_1(Λ) \cdot λ_n(Λ∗) ≥ 1$.
+
+
+\item In this exercise, we want to show that SVP is not harder than CVP in the sense that we can use an oracle for CVP to solve the SVP problem. We denote $CVP(B',t) := argmin\{\Vert x − t\Vert_2 : x ∈ Λ(B')\}$. Suppose that $B = (b_1,...,b_n)$ is the input basis for our SVP problem. Consider the following algorithm:
+\begin{enumerate}
+    \item FOR i = 1 TO n DO
+    \item Set $v_i:= CVP((b_1,...,b_{i−1}, 2b_i,b_{i+1},...,b_n),b_i)$
+    \item Return the shortest vector in $\{v_i −b_i| i = 1,...,n\}$
+\end{enumerate}
+Note that the algorithm calls the CVP oracle only n times on a lattice of dimension n. Prove that the algorithm returns the shortest vector in $Λ(B)$.
+
+
+  
+
+    
+\end{enumerate} 
+
+
+%\bibliographystyle{abbrv}
+%\bibliography{books,mybib,papers,my_publications}
+
+
+ 
+\end{document}
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+\newcommand{\setR}{\mathbb{R}}
+\newcommand{\setZ}{\mathbb{Z}}
+\newcommand{\setQ}{\mathbb{Q}}
+\newcommand{\setC}{\mathbb{C}}
+\newcommand{\setN}{\mathbb{N}}
+\newcommand{\wt}[1]{\widetilde{#1}}
+\newcommand{\opt}{{\sc 0/1-opt}\xspace}
+\newcommand{\aug}{{\sc 0/1-aug}\xspace}
+\newcommand{\psep}{{\sc 0/1-psep}\xspace}
+\newcommand{\sep}{{\sc 0/1-sep}\xspace}
+\newcommand{\fopt}{{\sc 0/1-testopt\xspace} }
+
+
+\DeclareMathOperator{\vol}{vol}
+\renewcommand{\epsilon}{\varepsilon}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\rank}{rank}
+
+
+%\pagestyle{fancyplain}
+
+ 
+ 
+
+%\bibliographystyle{abbrv}
+%\bibliography{books,mybib,papers,my_publications}
+
+
+ 
+\end{document}
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+
