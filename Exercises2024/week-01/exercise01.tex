@@ -1,0 +1,99 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fourier,graphicx} 
+\usepackage{amsmath,amsbsy,bm,amssymb,enumerate,mathrsfs}
+ 
+% Encoding settings
+\usepackage[utf8]{inputenc} 
+\usepackage{utf8math}
+\usepackage{anysize} 
+
+
+\newcommand{\smat}[1]{ \big(\begin{smallmatrix} #1 \end{smallmatrix}\big)}
+
+
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\Spa}{span}
+
+\renewcommand{\epsilon}{\varepsilon}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\cone}{cone}
+
+%\pagestyle{fancyplain}
+
+
+
+\title{Integer Optimization  \\ Problem Set 1 }
+
+%\author{ Friedrich Eisenbrand}
+%  \\
+%   EPFL\\
+%   Switzerland\\
+%   {\small \texttt{friedrich.eisenbrand@epfl.ch}}}}
+% } 
+
+
+\date{ Insert correct date}
+
+
+
+\begin{document}
+
+\maketitle 
+
+
+
+
+\begin{enumerate} 
+\item
+
+  Let $Λ ⊆ ℝ^n$ be a lattice. A vector $v ∈ Λ$ is called \emph{primitive} if $Λ$ has a basis including $v$.
+
+  \medskip
+
+  Show the following. A lattice vector $v ∈ Λ \setminus \{0\}$ is primitive  if and only if there is no lattice point of the form $μ ⋅ v$ with $0<μ<1$.
+
+\item Show that the set $ \{ x + y \sqrt{2} ： x,y ∈ ℤ \} ⊆ ℝ$ is not a lattice.
+
+\item Let $Λ ⊆ ℝ^n$  be a lattice, let $u_1 ,\dots ,u_m  ∈ Λ$  be lattice points and let
+  $ L = \Spa \{u_1, \dots , u_m\}$.
+
+
+  Let us consider the orthogonal projection
+
+  \begin{displaymath}
+    \begin{array}{rccc}      
+      π : & ℝ^ n &  ⟶ &  ℝ^ n \\
+          & x & ↦       & x-l 
+          \end{array}
+        \end{displaymath}
+where $l ∈ L$ such that  $x-l \, ⊥\,  u_i$ for each $i$.         
+This is called the projection onto the orthogonal complement $L^⊥$ of $L$.
+
+Prove that the image $Λ_1 = π(Λ)$  is a lattice.
+  
+
+  
+
+\end{enumerate}
+
+
+
+%\bibliographystyle{abbrv}
+%\bibliography{books,mybib,papers,my_publications}
+
+
+ 
+\end{document}
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
