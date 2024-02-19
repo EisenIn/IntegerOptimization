@@ -21,6 +21,8 @@
 \DeclareMathOperator{\Tr}{Tr}
 \DeclareMathOperator{\conv}{conv}
 \DeclareMathOperator{\cone}{cone}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
 
 %\pagestyle{fancyplain}
 
@@ -60,6 +62,24 @@
   \end{enumerate}
 
 Give an example of a lattice $Λ ⊆ ℝ^2$ where \ref{item:2} cannot be concluded if $v$ is not a shortest vector in the lattice. 
+
+
+\item Let $Λ(A)⊆ \RR^n$ be a lattice, where $A∈\RR^{n×n}$ is non-singular. Define the set $$Λ_∗=\{y∈ \RR^n:y^Tv∈ \ZZ \text{ for each }v ∈ Λ\}.$$ Show that $Λ_∗$ is a lattice. Determine a basis of $Λ_∗$. What is $det(Λ_∗)$?\\
+\textit{$Λ_∗$ is called the dual lattice of $Λ$.}
+
+\item Let $Λ⊆\RR^n$ be a full rank lattice. Assume $b_1,\hdots,b_n ∈ Λ$ are linearly independent and that minimize $|det(b_1, \hdots ,b_n)|$
+over all $n$ linearly independent lattice vectors. Prove that $b_1, \hdots ,b_n$ is a basis of $Λ$.
+
+\item Let $B ∈ \mathbb{Q}^{n×n}$ be a lattice basis that consists of pairwise orthogonal vectors. Prove that the shortest vector
+of $Λ(B )$ is the shortest column vector of $B$.
+
+\item Given a lattice $Λ$, we denote by $λ_k(Λ) ∈ \RR_{>0}$ the minimal number so that $B(0,λ_k)$ contains $k$ linearly independent lattice vectors. Show that for any lattice $Λ ⊆ \RR^n , λ_1 (Λ) \cdot λ_n (Λ∗) \geq 1$.
+
+\item Let $Λ ⊂ \RR^d$ be a lattice and let $u_1,\hdots,u_d$ be a set of vectors from $Λ$ such that the volume of the parallelepiped
+
+$$\{α_1u_1 +\hdots+α_du_d, \quad 0\leq α_i\leq1 \quad \text{ for } i=1,\hdots,d\}$$
+
+ is equal to $detΛ$. Prove that $u_1,\hdots ,u_d$ is a basis of $Λ$.
  
 
   
