@@ -1,0 +1,85 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fourier,graphicx} 
+\usepackage{amsmath,amsbsy,bm,amssymb,enumerate,mathrsfs}
+ 
+% Encoding settings
+\usepackage[utf8]{inputenc} 
+\usepackage{utf8math}
+\usepackage{anysize} 
+
+
+\newcommand{\smat}[1]{ \big(\begin{smallmatrix} #1 \end{smallmatrix}\big)}
+
+
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\Spa}{span}
+
+\renewcommand{\epsilon}{\varepsilon}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\cone}{cone}
+
+%\pagestyle{fancyplain}
+
+
+
+\title{Integer Optimization  \\ Problem Set 2 }
+
+%\author{ Friedrich Eisenbrand}
+%  \\
+%   EPFL\\
+%   Switzerland\\
+%   {\small \texttt{friedrich.eisenbrand@epfl.ch}}}}
+% } 
+
+
+\date{ Insert correct date}
+
+
+
+\begin{document}
+
+\maketitle 
+
+
+
+
+\begin{enumerate} 
+\item
+
+  Let $Λ ⊆ ℝ^n$ be a lattice and $v ∈ Λ$  $ v ≠0$ be a shortest vector, i.e., vector of minimum norm $\| ⋅ \|_2$. We have seen in class that $Λ' = \{π(v) ： v ∈ Λ\}$ is a lattice and therefore has a basis $b_1',\dots,b_k'$. Recall that $u(u) = u - λ v$ where $λ ∈ ℝ$ satisfies $(u - λ v ) \, ⊥ v$.
+
+  Let $b_1,\dots,b_k ∈ Λ$ such that $π(b_i) = b_i'$ for each $i$. Show the following:
+
+  \begin{enumerate}[i)] 
+  \item $b_1,\dots,b_k,v$ are linearly independent. \label{item:1}
+  \item The vectors $b_1,\dots,b_k,v$ generate $Λ$. \label{item:2}
+  \end{enumerate}
+
+Give an example of a lattice $Λ ⊆ ℝ^2$ where \ref{item:2} cannot be concluded if $v$ is not a shortest vector in the lattice. 
+ 
+
+  
+
+\end{enumerate}
+
+
+
+%\bibliographystyle{abbrv}
+%\bibliography{books,mybib,papers,my_publications}
+
+
+ 
+\end{document}
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
