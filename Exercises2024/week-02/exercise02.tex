@@ -52,9 +52,9 @@
 \begin{enumerate} 
 \item
 
-  Let $Λ ⊆ ℝ^n$ be a lattice and $v ∈ Λ$  $ v ≠0$ be a shortest vector, i.e., vector of minimum norm $\| ⋅ \|_2$. We have seen in class that $Λ' = \{π(v) ： v ∈ Λ\}$ is a lattice and therefore has a basis $b_1',\dots,b_k'$. Recall that $u(u) = u - λ v$ where $λ ∈ ℝ$ satisfies $(u - λ v ) \, ⊥ v$.
+  Let $Λ ⊆ ℝ^n$ be a lattice and $v ∈ Λ \setminus \{0\}$ be a shortest vector, i.e., a nonzero lattice vector of minimum norm $\| ⋅ \|_2$. We have seen in class that $Λ' = \{π(v) ： v ∈ Λ\} ⊆ ℝ^n$ is a lattice and therefore has a basis $b_1',\dots,b_k'$. Recall that $π(u) = u - λ v$ where $λ ∈ ℝ$ satisfies $(u - λ v ) \, ⊥ v$.
 
-  Let $b_1,\dots,b_k ∈ Λ$ such that $π(b_i) = b_i'$ for each $i$. Show the following:
+Let $b_1,\dots,b_k ∈ Λ$ such that $π(b_i) = b_i'$ for each $i$. Show the following:
 
   \begin{enumerate}[i)] 
   \item $b_1,\dots,b_k,v$ are linearly independent. \label{item:1}
@@ -64,22 +64,24 @@
 Give an example of a lattice $Λ ⊆ ℝ^2$ where \ref{item:2} cannot be concluded if $v$ is not a shortest vector in the lattice. 
 
 
-\item Let $Λ(A)⊆ \RR^n$ be a lattice, where $A∈\RR^{n×n}$ is non-singular. Define the set $$Λ_∗=\{y∈ \RR^n:y^Tv∈ \ZZ \text{ for each }v ∈ Λ\}.$$ Show that $Λ_∗$ is a lattice. Determine a basis of $Λ_∗$. What is $det(Λ_∗)$?\\
-\textit{$Λ_∗$ is called the dual lattice of $Λ$.}
+\item Let $Λ(A)⊆ \RR^n$ be a lattice, where $A∈\RR^{n×n}$ is non-singular. Define the set
+  $$Λ^∗=\left\{y∈ \RR^n:y^Tv∈ \ZZ \text{ for each }v ∈ Λ\right\}.$$
+  Show that $Λ^∗$ is a lattice. Determine a basis of $Λ^∗$. What is $det(Λ^∗)$?\\
+\textit{$Λ^∗$ is called the dual lattice of $Λ$.}
 
-\item Let $Λ⊆\RR^n$ be a full rank lattice. Assume $b_1,\hdots,b_n ∈ Λ$ are linearly independent and that minimize $|det(b_1, \hdots ,b_n)|$
+\item Let $Λ⊆\RR^n$ be a full rank lattice. Assume $b_1,\hdots,b_n ∈ Λ$ are linearly independent and that minimize $|\det(b_1, \hdots ,b_n)|$
 over all $n$ linearly independent lattice vectors. Prove that $b_1, \hdots ,b_n$ is a basis of $Λ$.
 
 \item Let $B ∈ \mathbb{Q}^{n×n}$ be a lattice basis that consists of pairwise orthogonal vectors. Prove that the shortest vector
 of $Λ(B )$ is the shortest column vector of $B$.
 
-\item Given a lattice $Λ$, we denote by $λ_k(Λ) ∈ \RR_{>0}$ the minimal number so that $B(0,λ_k)$ contains $k$ linearly independent lattice vectors. Show that for any lattice $Λ ⊆ \RR^n , λ_1 (Λ) \cdot λ_n (Λ∗) \geq 1$.
+\item Given a lattice $Λ$, we denote by $λ_k(Λ) ∈ \RR_{>0}$ the minimal number so that $B(0,λ_k)$ contains $k$ linearly independent lattice vectors. Show that for any lattice $Λ ⊆ \RR^n , λ_1 (Λ) \cdot λ_n (Λ^∗) \geq 1$.
 
-\item Let $Λ ⊂ \RR^d$ be a lattice and let $u_1,\hdots,u_d$ be a set of vectors from $Λ$ such that the volume of the parallelepiped
+\item Let $Λ ⊂ \RR^d$ be a full-dimensional lattice and let $u_1,\hdots,u_d$ be a set of vectors from $Λ$ such that the volume of the parallelepiped
 
 $$\{α_1u_1 +\hdots+α_du_d, \quad 0\leq α_i\leq1 \quad \text{ for } i=1,\hdots,d\}$$
 
- is equal to $detΛ$. Prove that $u_1,\hdots ,u_d$ is a basis of $Λ$.
+ is equal to $\detΛ$. Prove that $u_1,\hdots ,u_d$ is a basis of $Λ$.
  
 
   
