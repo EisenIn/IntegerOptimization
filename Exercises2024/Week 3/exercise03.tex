@@ -1,0 +1,97 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fourier,graphicx} 
+\usepackage{amsmath,amsbsy,bm,amssymb,enumerate,mathrsfs}
+ 
+% Encoding settings
+\usepackage[utf8]{inputenc} 
+\usepackage{utf8math}
+\usepackage{anysize} 
+
+
+\newcommand{\smat}[1]{ \big(\begin{smallmatrix} #1 \end{smallmatrix}\big)}
+
+
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\Spa}{span}
+
+\renewcommand{\epsilon}{\varepsilon}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\cone}{cone}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+
+%\pagestyle{fancyplain}
+
+
+
+\title{Integer Optimization  \\ Problem Set 3 }
+
+%\author{ Friedrich Eisenbrand}
+%  \\
+%   EPFL\\
+%   Switzerland\\
+%   {\small \texttt{friedrich.eisenbrand@epfl.ch}}}}
+% } 
+
+
+\date{ March 4, 2024}
+
+
+
+\begin{document}
+
+\maketitle 
+
+
+
+
+\begin{enumerate} 
+
+\item Find an analogue of Minkowski’s First Theorem for the $l_1$ and $l_∞$ norms.
+
+\item Show that for any full-rank integer lattice $Λ$, $\det(Λ) \cdot \mathbb{Z}_n ⊆ Λ$.
+
+
+\item For all large enough $n ∈ \mathbb{Z}$, find an $n$-dimensional full-rank lattice in which the successive minima $v_1, \hdots , v_n$ (in the $l_2$ norm) do not form a basis of the lattice. 
+
+Show that for any 2-dimensional full-rank lattice $Λ$, the successive minima $v_1,v_2$ do form a basis of $Λ$.
+
+\item Use Minkowski’s theorem to show the following result of Dirichlet: \\
+Let $Q\geq1$ be a real number and let $α_1,\hdots,α_n ∈\mathbb{R}$. There exists an integer $q$ and integers $p_1,\hdots,p_n$ with
+\begin{enumerate}
+    \item $1 \leq q \leq Q^n$
+    \item $|q\cdot \alpha_i - p_i | \leq \frac{1}{Q}$ for $i = 1, \hdots, n$.  
+\end{enumerate}
+
+\item Let $Λ := Λ(B) ⊆ \mathbb{R}^n$ be a full rank lattice for the basis $B$. Let $v_1,\hdots,v_n ∈ Λ\backslash \{0\}$ be linear independent vectors. Then $\max\{∥v_1∥_2,\hdots,∥v_n∥_2\} \geq ∥b^∗_n∥_2$ where $b^∗_n$ is the “last” vector in the Gram- Schmidt orthogonalization of $B = (b_1,\hdots,b_n)$.
+
+\item Let $B ∈ \mathbb{R}^{n×n}$ be any regular matrix and let $Λ := Λ(B)$ be the spanned lattice. The orthogonality defect of a lattice is given by 
+$$\gamma(B) := \frac{\prod_{i=1}^n \Vert b_i \Vert_2 }{\prod_{i = 1}^n \Vert b^\ast_i \Vert_2 }.$$
+
+Prove that there is a regular matrix $\tilde{B} $ so that $\tilde{Λ}  := Λ(\tilde{B} )$ is a sublattice of $Λ$ (that means $\tilde{Λ}$  is a lattice and $\tilde{Λ}  ⊆ Λ$) and the orthogonality defect satisfies $γ(\tilde{B} ) \leq n^{O(n)}$.
+
+  
+
+\end{enumerate}
+
+
+
+%\bibliographystyle{abbrv}
+%\bibliography{books,mybib,papers,my_publications}
+
+
+ 
+\end{document}
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
