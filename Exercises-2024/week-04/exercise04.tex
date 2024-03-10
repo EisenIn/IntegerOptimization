@@ -85,13 +85,8 @@ Please have a look and see whether you find 2-3 additional exercises in the vici
    \begin{displaymath}
      \| b_i'\|   ≥ \sqrt{3/4}\|v\| ≥ 1/2 \|v\|. 
    \end{displaymath}
-   \hfill{\emph{Hint: Pythagoras!}} 
- \item Using induction on the dimension of the lattice, we assume the inequality
-   \begin{eqnarray*}
-     ∏_{i=1}^{n-1}  \| b_i'\| & ≤ &   2^{(n-1) (n-2)/2}  \det (Λ') \\
-                            & =  & 2^{(n-1) (n-2)/2}  \det (Λ) /\|v\|. 
-   \end{eqnarray*}
- \item Show that there exists a basis $\{v,b_1,\dots,b_n\}$ of $Λ$ such that
+   \hfill{\emph{Hint: Pythagoras!}}
+    \item Show that there exists a basis $\{v,b_1,\dots,b_n\}$ of $Λ$ such that
    \begin{displaymath}
      b_i = b_i' + λ_i v ,  \,   i=1,\dots,n-1,
    \end{displaymath}
@@ -99,10 +94,18 @@ Please have a look and see whether you find 2-3 additional exercises in the vici
    \begin{displaymath}
      \| b_i\|  ≤  2 \| b_i'\|, \, i=1,\dots,n-1.
    \end{displaymath}
- \item    Conclude
+
+ \item Using induction on the dimension of the lattice, we assume the inequality
+   \begin{eqnarray*}
+     ∏_{i=1}^{n-1}  \| b_i'\| & ≤ &   2^{(n-1) (n-2)/2}  \det (Λ') \\
+                            & =  & 2^{(n-1) (n-2)/2}  \det (Λ) /\|v\|. 
+   \end{eqnarray*}
+   Conclude
    \begin{displaymath}
-         ∏_i^n \|b_i\| ≤ 2^{n (n-1)/2}  |\det (B)|.
+     ∏_i^n \|b_i\| ≤ 2^{n (n-1)/2}  |\det (B)|.
    \end{displaymath}
+
+
 
  \end{enumerate}
 
