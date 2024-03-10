@@ -51,7 +51,21 @@ Hi Neta. The class tomorrow is mostly on LLL. I will put two exercises on the sh
 Please have a look and see whether you find 2-3 additional exercises in the vicinity of LLL reduction 
 
 
-\begin{enumerate}[1)] 
+\begin{enumerate}[1)]
+\item Let $Λ ⊆ ℝ^n$ be a lattice of dimension $k≤n$. In this exercise, you are to construct a orthogonal matrix $U ∈ ℝ^{n × n}$  ($U^T ⋅U = I_n$) such that the first $n-k$ components of  $U ⋅ v$ are zero, for each $v ∈ Λ$. This means that we can identify $Λ$ as a full-dimensional lattice in $ℝ^k$ when it comes to $ℓ_2$-related problems. 
+
+  \begin{enumerate}[i)] 
+  \item Explain how to use Gram-Schmidt orthogonalization to find an
+    orthonormal basis $v_1,\dots,v_{n-k}∈ ℝ^n$ of the orthogonal
+    complement of $Λ$.
+  \item Let $b_1,\dots,b_k$ be a basis of $Λ$. Explain how
+    Gram-Schmidt on $v_1,\dots,v_{n-k},b_1,\dots,b_k$ (in this order
+    and with normalization) constructs a orthogonal matrix
+    $U ∈ ℝ^{ n ×n}$ that rotates $v_i$ into $e_i$ respectively, for
+    $i=1,\dots,n-k$.
+  \item Show that the image of $\{ U ⋅v ： v ∈ Λ\}$ is a $k$-dimensional lattice such that the first $n-k$ components of each lattice vector are zero.
+  \item Let $Λ' ⊆ ℝ^k$ be the lattice that is obtained from $\{ U v ： v ∈ Λ\}$ after deleting the first $n-k$ components. Show that $Λ'$ is full-dimensional and that $\det(Λ') = \det(Λ)$ holds. 
+  \end{enumerate}
 \item Let $Λ⊆ℝ^n$ be a full-dimensional lattice. In this exercise, we will prove that $Λ$ has a basis $B ∈ℝ^{n ×n}$  that is reduced in the following sense:
   \begin{displaymath}
    ∏_i^n \|b_i\| ≤ 2^{n (n-1)/2}  |\det (B)|.
