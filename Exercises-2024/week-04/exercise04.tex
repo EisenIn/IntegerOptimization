@@ -40,19 +40,61 @@
 
 \date{ March 11, 2024}
 
-Hi Neta. The class tomorrow is mostly on LLL. I will put two exercises on the sheet. One is a general reduction technique that is not efficient. The other is an example-run for LLL reduction.
 
-Please have a look and see whether you find 2-3 additional exercises in the vicinity of LLL reduction 
 
 \begin{document}
 
 \maketitle 
 
+Hi Neta. The class tomorrow is mostly on LLL. I will put two exercises on the sheet. One is a general reduction technique that is not efficient. The other is an example-run for LLL reduction.
+
+Please have a look and see whether you find 2-3 additional exercises in the vicinity of LLL reduction 
 
 
+\begin{enumerate}[1)] 
+\item Let $Λ⊆ℝ^n$ be a full-dimensional lattice. In this exercise, we will prove that $Λ$ has a basis $B ∈ℝ^{n ×n}$  that is reduced in the following sense:
+  \begin{displaymath}
+   ∏_i^n \|b_i\| ≤ 2^{n (n-1)/2}  |\det (B)|.
+ \end{displaymath}
+ We refer to the notation used in Exercise 1) of Problem Set~2, i.e., let $v ∈Λ \setminus \{0\}$ be a shortest vector of $Λ$ and $Λ'$ the projection of $Λ$ into the orthogonal complement of $Λ$.
+ \begin{enumerate}[i)]
+ \item Show that $\dim(Λ') = n-1$.
+ \item Moreover 
+   \begin{displaymath}
+     \det(Λ') = \det(Λ) / \|v\|.  
+   \end{displaymath}
+ \item Let $b_1', \dots , b_{n-1}'$ be a basis of $Λ'$. One has
+   \begin{displaymath}
+     \| b_i'\| ^2 + (1/4) \|v\|^2 ≥ \|v\|^2
+   \end{displaymath}
+   and therefore
+   \begin{displaymath}
+     \| b_i'\|   ≥ \sqrt{3/4}\|v\| ≥ 1/2 \|v\|. 
+   \end{displaymath}
+   \hfill{\emph{Hint: Pythagoras!}} 
+ \item Using induction on the dimension of the lattice, we assume the inequality
+   \begin{eqnarray*}
+     ∏_{i=1}^{n-1}  \| b_i'\| & ≤ &   2^{(n-1) (n-2)/2}  \det (Λ') \\
+                            & =  & 2^{(n-1) (n-2)/2}  \det (Λ) /\|v\|. 
+   \end{eqnarray*}
+ \item Show that there exists a basis $\{v,b_1,\dots,b_n\}$ of $Λ$ such that
+   \begin{displaymath}
+     b_i = b_i' + λ_i v ,  \,   i=1,\dots,n-1,
+   \end{displaymath}
+   where $|λ_i | ≤ 1/2$ for each $i$ and therefore each $b_i$ satisfies
+   \begin{displaymath}
+     \| b_i\|  ≤  2 \| b_i'\|, \, i=1,\dots,n-1.
+   \end{displaymath}
+ \item    Conclude
+   \begin{displaymath}
+         ∏_i^n \|b_i\| ≤ 2^{n (n-1)/2}  |\det (B)|.
+   \end{displaymath}
 
-\begin{enumerate} 
-\item Fritz will put there an exercise on reduced bases 
+ \end{enumerate}
+
+ 
+
+ 
 \item Fritz will put there an example for LLL reduction
 
   
