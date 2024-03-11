@@ -50,6 +50,39 @@
 
 
 \begin{enumerate}[1)]
+
+\item Consider the integer matrix 
+  \begin{displaymath}
+A =     \left(\begin{array}{rrr}
+1 & 4 & 7 \\
+2 & 5 & 8 \\
+3 & 6 & 10
+\end{array}\right)
+\end{displaymath}
+and its Gram-Schmidt orthogonalization
+
+\begin{displaymath}
+  A = \left(\begin{array}{rrr}
+1 & \frac{12}{7} & \frac{1}{6} \\
+2 & \frac{3}{7} & -\frac{1}{3} \\
+3 & -\frac{6}{7} & \frac{1}{6}
+\end{array}\right)
+⋅\left(\begin{array}{rrr}
+1 & \frac{16}{7} & \frac{53}{14} \\
+0 & 1 & \frac{16}{9} \\
+0 & 0 & 1
+\end{array}\right) 
+\end{displaymath}
+\begin{enumerate}[i)]
+\item What is the matrix in $ℤ^{3 ×3}$ that is the result of the \emph{normalization step} of the LLL-algorithm?
+\item Is this result LLL-reduced? If not, which columns should be swapped?
+\item Carry on LLL-reduction  with your favorite computer algebra system.
+
+  {\small \emph{I have created this example with sage. It is slightly annoying that Gram-Schmidt is row-wise instead of column-wise. All matrices need to be transposed. You can find the code in the Github-Repository
+      {\tt https://github.com/EisenIn/IntegerOptimization} \\
+      under the directory\\ 
+      {\tt Sage/Exercises-2024/Exercise-04} } }
+\end{enumerate}
 \item Let $Λ ⊆ ℝ^n$ be a lattice of dimension $k≤n$. In this exercise, you are to construct a orthogonal matrix $U ∈ ℝ^{n × n}$  ($U^T ⋅U = I_n$) such that the first $n-k$ components of  $U ⋅ v$ are zero, for each $v ∈ Λ$. This means that we can identify $Λ$ as a full-dimensional lattice in $ℝ^k$ when it comes to $ℓ_2$-related problems. 
 
   \begin{enumerate}[i)] 
@@ -110,7 +143,7 @@
  
 
  
-\item Fritz will put there an example for LLL reduction
+
 
 
 \item Show that for any pair of dual bases $B^⊤D = I$, the Gram matrix of the dual
