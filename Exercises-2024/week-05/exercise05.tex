@@ -1,0 +1,95 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fourier,graphicx} 
+\usepackage{amsmath,amsbsy,bm,amssymb,enumerate,mathrsfs}
+ 
+% Encoding settings
+\usepackage[utf8]{inputenc} 
+\usepackage{utf8math}
+\usepackage{anysize} 
+
+
+\newcommand{\smat}[1]{ \big(\begin{smallmatrix} #1 \end{smallmatrix}\big)}
+
+
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\Spa}{span}
+
+\renewcommand{\epsilon}{\varepsilon}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\cone}{cone}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+
+%\pagestyle{fancyplain}
+
+
+
+\title{Integer Optimization  \\ Problem Set 5 }
+
+%\author{ Friedrich Eisenbrand}
+%  \\
+%   EPFL\\
+%   Switzerland\\
+%   {\small \texttt{friedrich.eisenbrand@epfl.ch}}}}
+% } 
+
+
+\date{ March 18, 2024}
+
+
+
+\begin{document}
+
+\maketitle 
+
+
+\begin{enumerate}
+\item
+Using Minkowski's theorem, show that for prime $p\equiv 1 \pmod{4}$, we can always find some $a,b ∈ \mathbb{Z}$ , such that $p=a^2+b^2$. Explain how to use the LLL algorithm to find the numbers $a, b$ that satisfy $p = a^2 + b^2$.
+
+\item Let $\text{GapSVP}_γ$ be defined as the following problem: given a basis $B$ and a positive real $d$, determine if $λ_1(\Lambda(B)) ≤ d$ or $λ_1(\Lambda(B)) > γ\cdot d$.\\
+Show that the problem of approximating $λ_1(\Lambda(B))$ within a factor $γ$ can be efficiently reduced to $\text{GapSVP}_γ$.
+
+
+\item The Hermite factor of an n-dimensional lattice $Λ$ is the quantity $γ(Λ) = \left(\frac{λ_1(Λ)}{ \det(Λ)^{1/n}}\right)^2$. The Hermite constant in dimension n is the supremum $γ_n = \sup_Λ γ(Λ)$, where $Λ$ ranges over all n-dimensional lattices.
+\begin{enumerate}
+    \item Show that $\gamma_n \leq n$ for every $n$.
+    \item Find a lattice $Λ ⊂ \mathbb{R}^2$ such that $γ(Λ) = 2/√3$.
+    \item For any lattice $Λ$, $(\prod_{i=1}^n λ_i)^{1/n} ≤ √γ_n \cdot \det(Λ)^{1/n}$.
+    \item Prove that any lattice achieving Hermite's constant $\gamma_n$ must have $\lambda_1 = \lambda_2 = \hdots = \lambda_n$. 
+\end{enumerate}
+
+\item For the LLL algorithm on a basis $A$, we discussed the potential function 
+$$\phi(A) := \Vert b_1^\ast \Vert^{2n} \Vert b_2^\ast \Vert^{2(n-1)} \hdots \Vert b_n^\ast \Vert^{2}.$$
+
+Let $A_i = (b_1, \hdots, b_i)$ be the truncated matrix with the first $i$ column vectors of $A$. Show that $$\phi(A) = \displaystyle\prod_{i = 1}^n \det(A_i^T A_i).$$ 
+
+\item Find a basis $b_1, \hdots , b_n$ such that after we apply one reduction step of the LLL algorithm to it, the maximum length of a vector in it increases (even by as much as $Ω(√n)$).
+
+
+
+
+
+    
+\end{enumerate}
+
+
+%\bibliographystyle{abbrv}
+%\bibliography{books,mybib,papers,my_publications}
+
+
+ 
+\end{document}
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
