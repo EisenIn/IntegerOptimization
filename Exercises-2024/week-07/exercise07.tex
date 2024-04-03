@@ -1,0 +1,98 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fourier,graphicx} 
+\usepackage{amsmath,amsbsy,bm,amssymb,enumerate,mathrsfs}
+ 
+% Encoding settings
+\usepackage[utf8]{inputenc} 
+\usepackage{utf8math}
+\usepackage{anysize} 
+
+
+\newcommand{\smat}[1]{ \big(\begin{smallmatrix} #1 \end{smallmatrix}\big)}
+
+
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\Spa}{span}
+
+\renewcommand{\epsilon}{\varepsilon}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\cone}{cone}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+
+%\pagestyle{fancyplain}
+
+
+
+\title{Integer Optimization  \\ Problem Set 7 }
+
+%\author{ Friedrich Eisenbrand}
+%  \\
+%   EPFL\\
+%   Switzerland\\
+%   {\small \texttt{friedrich.eisenbrand@epfl.ch}}}}
+% } 
+
+
+\date{ April 8, 2024}
+
+
+
+\begin{document}
+
+\maketitle 
+
+
+\begin{enumerate}
+\item Show that there is a constant $c > 0$ such that the following algorithm, given a basis $B ∈ \mathbb{Z}^{m×n}$ and a target
+vector $t ∈ \mathbb{Z}^m$, finds a lattice point $y ∈ \Lambda(B)$ where
+$\Vert y − t \Vert ≤ 2^{cn}  \cdot \text{dist}(t, \Lambda(B))$:
+\begin{enumerate}
+    \item Run the LLL-reduction algorithm on $B$ to get an LLL-reduced basis $B'$.
+    \item Find $s = (s_1, \hdots , s_n) ∈\mathbb{R}^n$ such that $B's = t$, say, by Gaussian Elimination.
+    \item Let $\hat{s} =  (⌊s_1⌉,\hdots,⌊s_n⌉)$ be the vector consisting of the entries of $s$ rounded to the nearest integer.
+    \item Output $y = B'\hat{s}$.
+\end{enumerate}
+
+\item For any vector $v = (v_1,v_2,\hdots,v_n) ∈ \mathbb{Z}^n$, let $Rot(v) = (v_2,v_3,\hdots,v_n,v_1)$ denote the cyclic rotation of $v$. A cyclic lattice is one that is closed under the $Rot(\cdot)$ operation. That is, a lattice $\Lambda$ is cyclic if for every $v ∈ \Lambda, Rot(v) ∈ \Lambda$ too. Give a polynomial-time algorithm that finds $2^{o(n)}$-approximate shortest vectors on cyclic lattices, improving on the LLL algorithm.  
+
+\item In this exercise, we want to show that SVP is not harder than CVP in the sense that we can use an oracle for CVP to solve the SVP problem. We denote $$CVP(B',t):=argmin\{∥x−t\Vert_2:x∈Λ(B')\}.$$ Suppose that $B = (b_1,\hdots,b_n)$ is the input basis for our SVP problem. Show how an oracle that solves CVP can be used to solve SVP in polynomially many calls to the oracle. 
+
+\item Recall that for $X ⊆ \mathbb{R}^n$ the convex hull of $X$ is
+ $$conv(X)= \left\{\sum_{i =1}^t μ_ix_i: t∈\mathbb{N}_+,μ_i\geq0,x_i∈X,\sum_{i =1}^t μ_i=1 \right\}.$$
+Show that, for $A,B ⊆\mathbb{R}^n$, one has $$conv(A∪B)=conv(conv(A)∪conv(B)).$$
+
+\item For $X⊆\mathbb{R}^n$, $X_I=conv(X∩\mathbb{Z}^n)$.
+Let $C=cone(\{c_1,\hdots,c_r\})$ with $c_i ∈ \mathbb{Z}^n$ for $1\leq i\leq r$. Show that $C_I =C$.
+
+\item In this exercise, you can assume that each cone, $cone(X)$ with $X ⊆ \mathbb{R}^n$ finite can be written as $$P(A,0)=\{x∈\mathbb{R}^n: Ax\leq 0\}$$ for some matrix A and vice versa. \\
+Prove that for $P ⊆ \mathbb{R}^n$, the following statements are equivalent:
+\begin{enumerate}
+    \item $P$ is a polyhedron, i.e., there exist $A ∈ \mathbb{R}^{d×n}$ and $b ∈ \mathbb{R}^d$ for some $d$ such that
+$$P =\{x:Ax\leq b\}$$
+\item $P =conv(\{v_1,\hdots,v_s\})+cone(\{r_1,\hdots,r_t\})$ for some finitely many vectors $v_1, \hdots, v_s, r_1, \hdots, r_t \in \mathbb{R}^n$. 
+\end{enumerate}
+
+
+\end{enumerate}
+
+
+%\bibliographystyle{abbrv}
+%\bibliography{books,mybib,papers,my_publications}
+
+
+ 
+\end{document}
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
