@@ -58,7 +58,6 @@ $\Vert y − t \Vert ≤ 2^{cn}  \cdot \text{dist}(t, \Lambda(B))$:
     \item Output $y = B'\hat{s}$.
 \end{enumerate}
 
-\item For any vector $v = (v_1,v_2,\hdots,v_n) ∈ \mathbb{Z}^n$, let $Rot(v) = (v_2,v_3,\hdots,v_n,v_1)$ denote the cyclic rotation of $v$. A cyclic lattice is one that is closed under the $Rot(\cdot)$ operation. That is, a lattice $\Lambda$ is cyclic if for every $v ∈ \Lambda, Rot(v) ∈ \Lambda$ too. Give a polynomial-time algorithm that finds $2^{o(n)}$-approximate shortest vectors on cyclic lattices, improving on the LLL algorithm.  
 
 \item In this exercise, we want to show that SVP is not harder than CVP in the sense that we can use an oracle for CVP to solve the SVP problem. We denote $$CVP(B',t):=argmin\{∥x−t\Vert_2:x∈Λ(B')\}.$$ Suppose that $B = (b_1,\hdots,b_n)$ is the input basis for our SVP problem. Show how an oracle that solves CVP can be used to solve SVP in polynomially many calls to the oracle. 
 
