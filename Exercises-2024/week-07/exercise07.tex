@@ -23,7 +23,11 @@
 \DeclareMathOperator{\cone}{cone}
 \DeclareMathOperator{\RR}{\mathbb{R}}
 \DeclareMathOperator{\ZZ}{\mathbb{Z}}
-
+\DeclareMathOperator{\argmin}{\mathrm{argmin}}
+\DeclareMathOperator{\CVP}{\mathrm{CVP}}
+\DeclareMathOperator{\E}{\mathcal{E}}
+% \DeclareMathOperator{\conv}{\mathrm{conv}}
+%\DeclareMathOperator{\cone}{\mathrm{cone}}
 %\pagestyle{fancyplain}
 
 
@@ -48,6 +52,42 @@
 
 
 \begin{enumerate}
+
+\item Recall the transference bound that we showed in class:
+  \begin{displaymath}
+    μ(Λ) ρ(Λ^*) ≤  \frac{1}{4} \sqrt{∑_{k=1}^n k^2} ≤ n^{3/2} / 4. 
+  \end{displaymath}
+  This bound only depends on the dimension. In this exercise, you will show a weaker bound which, nevertheless, is also only depending on the dimension $n$ via the notion of  LLL-reduction. Let $B = (b_1,\dots,b_n)∈ ℝ^{n ×n}$ be nonsingular and $LLL$-reduced with Gram-Schmidt orthogonalization $ B = B^* ⋅ R$ and let $Λ = Λ(B)$. 
+  \begin{enumerate}
+  \item  Show that $b_n^* / \|b_n^*\|^2 ∈ Λ^*$
+  \item Use Exercise 3) from Problem set~7  and the LLL-reduction criterion to show that
+    \begin{displaymath}
+       μ(Λ) ρ(Λ^*) ≤\sqrt{n} 2^{n-2} 
+    \end{displaymath}
+  \end{enumerate}
+  
+
+\item An \emph{ellipsoid} $\E$ is a set of the form
+  \begin{displaymath}
+    \E = \left \{ x ∈ ℝ^n ： \| A (x  - t) \| ≤1 \right\} 
+    \end{displaymath}
+    where $A ∈ ℝ^{n ×n}$ is a non-singular matrix.
+    \begin{enumerate}
+    \item 
+      Show that $\E$ is the image of $B(0,1)$ under the map
+      \begin{displaymath}
+        τ(x) = A^{-1} x + t
+      \end{displaymath}
+    \item Show that, for any $d ∈ ℝ^n$, one has
+      \begin{displaymath}
+        \max_{x,y ∈ \E} d^T(x - y) = 2 \|A^T d\| 
+      \end{displaymath}
+    \item Conclude the following: If $\E ∩ ℤ^n = ∅$, then there exists a $d ∈ ℤ^n \setminus \{0\}$ such that
+      \begin{displaymath}
+              \max_{x,y ∈ \E} d^T(x - y) ≤ n^{3/2}/2. 
+      \end{displaymath}
+    \end{enumerate}
+    
 \item Show that there is a constant $c > 0$ such that the following algorithm, given a basis $B ∈ \mathbb{Z}^{m×n}$ and a target
 vector $t ∈ \mathbb{Z}^m$, finds a lattice point $y ∈ \Lambda(B)$ where
 $\Vert y − t \Vert ≤ 2^{cn}  \cdot \text{dist}(t, \Lambda(B))$:
@@ -59,22 +99,22 @@ $\Vert y − t \Vert ≤ 2^{cn}  \cdot \text{dist}(t, \Lambda(B))$:
 \end{enumerate}
 
 
-\item In this exercise, we want to show that SVP is not harder than CVP in the sense that we can use an oracle for CVP to solve the SVP problem. We denote $$CVP(B',t):=argmin\{∥x−t\Vert_2:x∈Λ(B')\}.$$ Suppose that $B = (b_1,\hdots,b_n)$ is the input basis for our SVP problem. Show how an oracle that solves CVP can be used to solve SVP in polynomially many calls to the oracle. 
+\item In this exercise, we want to show that SVP is not harder than CVP (Closest Vector Problem) in the sense that we can use an oracle for CVP to solve the SVP problem. We denote $$\CVP(B',t):=\argmin\{∥x−t\Vert_2:x∈Λ(B')\}.$$ Suppose that $B = (b_1,\hdots,b_n)$ is the input basis for our SVP problem. Show how an oracle that solves CVP can be used to solve SVP in polynomially many calls to the oracle. 
 
 \item Recall that for $X ⊆ \mathbb{R}^n$ the convex hull of $X$ is
- $$conv(X)= \left\{\sum_{i =1}^t μ_ix_i: t∈\mathbb{N}_+,μ_i\geq0,x_i∈X,\sum_{i =1}^t μ_i=1 \right\}.$$
-Show that, for $A,B ⊆\mathbb{R}^n$, one has $$conv(A∪B)=conv(conv(A)∪conv(B)).$$
+ $$\conv(X)= \left\{\sum_{i =1}^t μ_ix_i: t∈\mathbb{N}_+,μ_i\geq0,x_i∈X,\sum_{i =1}^t μ_i=1 \right\}.$$
+Show that, for $A,B ⊆\mathbb{R}^n$, one has $$\conv(A∪B)=\conv(\conv(A)∪\conv(B)).$$
 
-\item For $X⊆\mathbb{R}^n$, $X_I=conv(X∩\mathbb{Z}^n)$.
-Let $C=cone(\{c_1,\hdots,c_r\})$ with $c_i ∈ \mathbb{Z}^n$ for $1\leq i\leq r$. Show that $C_I =C$.
+% \item For $X⊆\mathbb{R}^n$, $X_I=conv(X∩\mathbb{Z}^n)$.
+% Let $C=\cone(\{c_1,\hdots,c_r\})$ with $c_i ∈ \mathbb{Z}^n$ for $1\leq i\leq r$. Show that $C_I =C$.
 
-\item In this exercise, you can assume that each cone, $cone(X)$ with $X ⊆ \mathbb{R}^n$ finite can be written as $$P(A,0)=\{x∈\mathbb{R}^n: Ax\leq 0\}$$ for some matrix A and vice versa. \\
-Prove that for $P ⊆ \mathbb{R}^n$, the following statements are equivalent:
-\begin{enumerate}
-    \item $P$ is a polyhedron, i.e., there exist $A ∈ \mathbb{R}^{d×n}$ and $b ∈ \mathbb{R}^d$ for some $d$ such that
-$$P =\{x:Ax\leq b\}$$
-\item $P =conv(\{v_1,\hdots,v_s\})+cone(\{r_1,\hdots,r_t\})$ for some finitely many vectors $v_1, \hdots, v_s, r_1, \hdots, r_t \in \mathbb{R}^n$. 
-\end{enumerate}
+% \item In this exercise, you can assume that each cone, $\cone(X)$ with $X ⊆ \mathbb{R}^n$ finite can be written as $$P(A,0)=\{x∈\mathbb{R}^n: Ax\leq 0\}$$ for some matrix A and vice versa. \\
+% Prove that for $P ⊆ \mathbb{R}^n$, the following statements are equivalent:
+% \begin{enumerate}
+%     \item $P$ is a polyhedron, i.e., there exist $A ∈ \mathbb{R}^{d×n}$ and $b ∈ \mathbb{R}^d$ for some $d$ such that
+% $$P =\{x:Ax\leq b\}$$
+% \item $P =conv(\{v_1,\hdots,v_s\})+\cone(\{r_1,\hdots,r_t\})$ for some finitely many vectors $v_1, \hdots, v_s, r_1, \hdots, r_t \in \mathbb{R}^n$. 
+%\end{enumerate}
 
 
 \end{enumerate}
