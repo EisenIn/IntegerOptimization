@@ -1,0 +1,90 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fourier,graphicx} 
+\usepackage{amsmath,amsbsy,bm,amssymb,enumerate,mathrsfs}
+ 
+% Encoding settings
+\usepackage[utf8]{inputenc} 
+\usepackage{utf8math}
+\usepackage{anysize} 
+
+
+\newcommand{\smat}[1]{ \big(\begin{smallmatrix} #1 \end{smallmatrix}\big)}
+
+
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\Spa}{span}
+
+\renewcommand{\epsilon}{\varepsilon}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\cone}{cone}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\argmin}{\mathrm{argmin}}
+\DeclareMathOperator{\CVP}{\mathrm{CVP}}
+\DeclareMathOperator{\E}{\mathcal{E}}
+% \DeclareMathOperator{\conv}{\mathrm{conv}}
+%\DeclareMathOperator{\cone}{\mathrm{cone}}
+%\pagestyle{fancyplain}
+
+
+
+\title{Integer Optimization  \\ Problem Set 7 }
+
+%\author{ Friedrich Eisenbrand}
+%  \\
+%   EPFL\\
+%   Switzerland\\
+%   {\small \texttt{friedrich.eisenbrand@epfl.ch}}}}
+% } 
+
+
+\date{ April 8, 2024}
+
+
+
+\begin{document}
+
+\maketitle 
+
+
+\begin{enumerate}
+
+\item Let $∥\cdot∥_∗$ be any norm in $\mathbb{R}^n$. Show that there is a matrix $A$ so that $∥Ax∥_2 \leq ∥x∥_∗ \leq \sqrt{n}∥Ax∥_2$.
+
+\item Consider $K:= \left\{x∈\mathbb{R}^n |∥x−a∥_2 \leq \frac{1}{4}\sqrt{n}\right\}$ where $a:=\left(\frac{1}{2},\hdots,\frac{1}{2}\right)$. Show that $K∩\mathbb{Z}^n =\emptyset$. Then give $w(K)$ (up to a constant factor).
+
+\item Let $K ⊆\mathbb{R}^n$ be a symmetric convex body. Show that there is an ellipsoid $E$ (with the origin as center) so that $K ⊆ E ⊆ C\sqrt{n}\cdot K$ for some (large) constant $C >0$.
+
+\item For $X⊆\mathbb{R}^n$, $X_I=conv(X∩\mathbb{Z}^n)$.
+Let $C=cone(\{c_1,\hdots,c_r\})$ with $c_i ∈ \mathbb{Z}^n$ for $1\leq i\leq r$. Show that $C_I =C$.
+
+\item In this exercise, you can assume that each cone, $cone(X)$ with $X ⊆ \mathbb{R}^n$ finite can be written as $$P(A,0)=\{x∈\mathbb{R}^n: Ax\leq 0\}$$ for some matrix A and vice versa. \\
+Prove that for $P ⊆ \mathbb{R}^n$, the following statements are equivalent:
+\begin{enumerate}
+    \item $P$ is a polyhedron, i.e., there exist $A ∈ \mathbb{R}^{d×n}$ and $b ∈ \mathbb{R}^d$ for some $d$ such that
+$$P =\{x:Ax\leq b\}$$
+\item $P =conv(\{v_1,\hdots,v_s\})+cone(\{r_1,\hdots,r_t\})$ for some finitely many vectors $v_1, \hdots, v_s, r_1, \hdots, r_t \in \mathbb{R}^n$. 
+\end{enumerate}
+
+\end{enumerate}
+
+
+%\bibliographystyle{abbrv}
+%\bibliography{books,mybib,papers,my_publications}
+
+
+ 
+\end{document}
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
