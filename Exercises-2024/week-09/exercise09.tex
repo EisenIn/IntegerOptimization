@@ -1,0 +1,93 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fourier,graphicx} 
+\usepackage{amsmath,amsbsy,bm,amssymb,enumerate,mathrsfs}
+ 
+% Encoding settings
+\usepackage[utf8]{inputenc} 
+\usepackage{utf8math}
+\usepackage{anysize} 
+
+
+\newcommand{\smat}[1]{ \big(\begin{smallmatrix} #1 \end{smallmatrix}\big)}
+
+
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\Spa}{span}
+
+\renewcommand{\epsilon}{\varepsilon}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\cone}{cone}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\argmin}{\mathrm{argmin}}
+\DeclareMathOperator{\CVP}{\mathrm{CVP}}
+\DeclareMathOperator{\E}{\mathcal{E}}
+% \DeclareMathOperator{\conv}{\mathrm{conv}}
+%\DeclareMathOperator{\cone}{\mathrm{cone}}
+%\pagestyle{fancyplain}
+
+
+
+\title{Integer Optimization  \\ Problem Set 9 }
+
+%\author{ Friedrich Eisenbrand}
+%  \\
+%   EPFL\\
+%   Switzerland\\
+%   {\small \texttt{friedrich.eisenbrand@epfl.ch}}}}
+% } 
+
+
+\date{ April 22, 2024}
+
+
+
+\begin{document}
+
+\maketitle 
+
+
+\begin{enumerate}
+
+
+\item For any $n$, give a linear inequality system $Ax \leq b$ with $2^n$ constraints so that there is no
+$x ∈ \mathbb{Z}^n$ with $A x \leq b$ while removing any constraint makes it integer feasible.
+
+\item Suppose that $P=\left\{x∈\mathbb{R}^m |Ax\leq b\right\}⊆ \mathbb{R}^m$ is a polytope with $A∈\mathbb{R}^{m×n}$ and $b∈\mathbb{R}^m$. Let $int(P):=\{x∈\mathbb{R}^n |Ax<b\}$ be the interior. Suppose that on each facet i there is a point $x^i ∈ P∩\mathbb{Z}^n$ with $A_i x^i = b_i$ but $A_j x^i < b_j$ for $j\neq i$. Moreover suppose that $k := |int(P)∩ \mathbb{Z}^n|$ and that after removing any constraint from $P$ , the number of integer points in the interior would exceed $k$ . Prove that $m < (k + 2) \cdot 2^n$.
+
+\item Let $P ⊂ \mathbb{R}^d$ be a polyhedron defined by $m \geq 4$ linear inequalities, and let
+$Q = pr(P) ⊂ \mathbb{R}^{d−1}$ be its projection onto the first $d-1$ coordinates. Prove that $Q$ is defined by at most $m^2/4$ linear inequalities.
+
+\item Let $v_1, \hdots , v_{d+1} ∈ \mathbb{R}^d$ be affinely independent points in $\mathbb{R}^d$. The polytope $Δ = \conv (v_1 , \hdots , v_{d+1})$ is called a d-dimensional simplex. Prove that $Δ$ has a non-empty interior. Describe the faces of the d-dimensional simplex.
+
+\item Let $A ⊂ \mathbb{R}^d$ be a closed convex set. Prove that $A$ has finitely many faces if and only if A is a polyhedron.
+
+\item Compute the (upper triangular) Hermite Normal Form of $$ \left(\begin{matrix}
+    5 & 18 \\
+    11 & 40
+\end{matrix}\right)$$ via a sequence
+of elementary column operations. Give the final result, the sequence of operations performed, and the unimodular matrix corresponding to the sequence of operations.
+
+
+\end{enumerate}
+
+
+%\bibliographystyle{abbrv}
+%\bibliography{books,mybib,papers,my_publications}
+
+
+ 
+\end{document}
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
