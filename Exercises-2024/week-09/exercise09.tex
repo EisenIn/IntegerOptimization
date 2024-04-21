@@ -53,24 +53,69 @@
 
 \begin{enumerate}
 
+  \item Compute the  Hermite Normal Form of $$ \left(\begin{matrix}
+    5 & 18  & 2\\
+    11 & 40 & 22
+\end{matrix}\right)$$ via a sequence
+of elementary column operations. Give the final result, the sequence of operations performed, and the unimodular matrix corresponding to the sequence of operations.
+\item Let $d ∈ ℤ^n$, $d ≠0$ and $β ∈ ℤ$. Show that there exists $x ∈ ℤ^n$ with
+  \begin{displaymath}
+    d^T x = β 
+  \end{displaymath}
+  if and only if $\gcd(d_1,\dots,d_n)$ divides $β$. 
+\item Let $K ⊆ ℝ^n$ be convex, $d ∈ℤ^n \setminus \{0\}$ with $\gcd(d) = 1$. We consider one \emph{branch} of an integer program, where we have to decide whether 
+  \begin{equation}
+    \label{eq:1}    
+    \left(K ∩ \{ x ∈ ℝ^n ： d^T x = γ\}  \right) ∩ℤ^n = ∅ . 
+  \end{equation}
+  
+  \begin{enumerate}[a)] 
+  \item Show that there exists a unimodular matrix $U ∈ℤ^{n ×n}$ with
+    $d^T ⋅ U = (1,0,\dots,0)$.
+  \item Determine  a  convex set $K' ⊆ ℝ^{n-1}$ such that~\eqref{eq:1} holds if and only if
+    \begin{displaymath}
+      K' ∩ ℤ^{n-1} = ∅. 
+    \end{displaymath}
+  \end{enumerate}
+\item Let $A ∈ℤ^{m ×n}$ be of full row rank. Let $B ⊆ \{1,\dots,n\}$ be a \emph{basis} of $A$, i,e,. a set of $m$ indices such that the corresponding columns of $A$ are linearly independent.
+  \begin{enumerate}
+  \item Show that $Λ(A) = Λ([A|v])$, where $v ∈ Λ(A)$.
+  \item Show that $Λ(A) = Λ([A| D I_m])$, where $D  = |\det(A_B)|$, where $A_B∈ℤ^{m ×m}$ is the matrix with columns of $A$ indexed by $B$.
+  \end{enumerate}
 
-\item For any $n$, give a linear inequality system $Ax \leq b$ with $2^n$ constraints so that there is no
-$x ∈ \mathbb{Z}^n$ with $A x \leq b$ while removing any constraint makes it integer feasible.
+  
+% \item For any $n$, give a linear inequality system $Ax \leq b$ with $2^n$ constraints so that there is no
+% $x ∈ \mathbb{Z}^n$ with $A x \leq b$ while removing any constraint makes it integer feasible.
 
-\item Suppose that $P=\left\{x∈\mathbb{R}^m |Ax\leq b\right\}⊆ \mathbb{R}^m$ is a polytope with $A∈\mathbb{R}^{m×n}$ and $b∈\mathbb{R}^m$. Let $int(P):=\{x∈\mathbb{R}^n |Ax<b\}$ be the interior. Suppose that on each facet i there is a point $x^i ∈ P∩\mathbb{Z}^n$ with $A_i x^i = b_i$ but $A_j x^i < b_j$ for $j\neq i$. Moreover suppose that $k := |int(P)∩ \mathbb{Z}^n|$ and that after removing any constraint from $P$ , the number of integer points in the interior would exceed $k$ . Prove that $m < (k + 2) \cdot 2^n$.
+% \item Suppose that $P=\left\{x∈\mathbb{R}^m |Ax\leq b\right\}⊆ \mathbb{R}^m$ is a polytope with $A∈\mathbb{R}^{m×n}$ and $b∈\mathbb{R}^m$. Let $\int(P):=\{x∈\mathbb{R}^n |Ax<b\}$ be the interior. Suppose that on each facet i there is a point $x^i ∈ P∩\mathbb{Z}^n$ with $A_i x^i = b_i$ but $A_j x^i < b_j$ for $j\neq i$. Moreover suppose that $k := |\int(P)∩ \mathbb{Z}^n|$ and that after removing any constraint from $P$ , the number of integer points in the interior would exceed $k$ . Prove that $m < (k + 2) \cdot 2^n$.
 
 \item Let $P ⊂ \mathbb{R}^d$ be a polyhedron defined by $m \geq 4$ linear inequalities, and let
-$Q = pr(P) ⊂ \mathbb{R}^{d−1}$ be its projection onto the first $d-1$ coordinates. Prove that $Q$ is defined by at most $m^2/4$ linear inequalities.
+  $Q = π(P) ⊂ \mathbb{R}^{d−1}$ be its projection onto the first $d-1$ coordinates. In other words, $Q$ is the image of $P$ under the map
+  \begin{displaymath}
+    \begin{array}{rrcll}
+      π： & ℝ^n &⟶& ℝ^{n-1} \\
+          & \left( 
+            \begin{smallmatrix}
+              x_1\\
+               x_2\\
+              \vdots\\
+              x_n
+            \end{smallmatrix} \right)  & \longmapsto & \left(\begin{smallmatrix}             
+              x_2\\
+              x_3 \\
+              \vdots\\
+              x_n
+            \end{smallmatrix}  \right)
+    \end{array}
+  \end{displaymath}
+
+  Prove that $Q$ is a polyhedron that is defined by at most $m^2/4$ linear inequalities.
 
 \item Let $v_1, \hdots , v_{d+1} ∈ \mathbb{R}^d$ be affinely independent points in $\mathbb{R}^d$. The polytope $Δ = \conv (v_1 , \hdots , v_{d+1})$ is called a d-dimensional simplex. Prove that $Δ$ has a non-empty interior. Describe the faces of the d-dimensional simplex.
 
 \item Let $A ⊂ \mathbb{R}^d$ be a closed convex set. Prove that $A$ has finitely many faces if and only if A is a polyhedron.
 
-\item Compute the (upper triangular) Hermite Normal Form of $$ \left(\begin{matrix}
-    5 & 18 \\
-    11 & 40
-\end{matrix}\right)$$ via a sequence
-of elementary column operations. Give the final result, the sequence of operations performed, and the unimodular matrix corresponding to the sequence of operations.
+
 
 
 \end{enumerate}
