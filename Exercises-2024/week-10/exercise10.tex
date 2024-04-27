@@ -1,0 +1,90 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fourier,graphicx} 
+\usepackage{amsmath,amsbsy,bm,amssymb,enumerate,mathrsfs}
+ 
+% Encoding settings
+\usepackage[utf8]{inputenc} 
+\usepackage{utf8math}
+\usepackage{anysize} 
+
+
+\newcommand{\smat}[1]{ \big(\begin{smallmatrix} #1 \end{smallmatrix}\big)}
+
+
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\Spa}{span}
+
+\renewcommand{\epsilon}{\varepsilon}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\cone}{cone}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\argmin}{\mathrm{argmin}}
+\DeclareMathOperator{\CVP}{\mathrm{CVP}}
+\DeclareMathOperator{\E}{\mathcal{E}}
+% \DeclareMathOperator{\conv}{\mathrm{conv}}
+%\DeclareMathOperator{\cone}{\mathrm{cone}}
+%\pagestyle{fancyplain}
+
+
+
+\title{Integer Optimization  \\ Problem Set 9 }
+
+%\author{ Friedrich Eisenbrand}
+%  \\
+%   EPFL\\
+%   Switzerland\\
+%   {\small \texttt{friedrich.eisenbrand@epfl.ch}}}}
+% } 
+
+
+\date{ April 22, 2024}
+
+
+
+\begin{document}
+
+\maketitle 
+
+
+\begin{enumerate}
+
+  \item Is the Voronoi cell with respect to the $l_\infty$ norm convex? If so, prove it and if not give a counterexample. 
+
+  \item Prove that $V⊆B(0,n\cdotλ_n(Λ))$ where $V$ is the Voronoi cell of the lattice $Λ$.
+
+  \item Show that the vertex at which three Voronoi cells $V(p_1), V(p_2), \text{ and } V(p_3)$ intersect is equidistant from all sites $p_1, p_2, p3$. Show that it is the center of the circle passing through these sites, and this circle contains no other sites in its interior.
+
+  \item Given any $n$ points in $\mathbb{R}^2$, show that their Voronoi diaggram has at most $2n-5$ vertices and $3n-6$ edges.
+
+  \item Given a set of points $S$, show that the region $V(p)$ is unbounded iff $p$ is an extreme point of $\conv(S)$. 
+
+  \item Given $4n$ points in the plane in general position and a line not passing through any of them that has $2n$ points on each side, prove the existence of another line that partitions the plane into $4$ regions, each one with exactly $n$ points.
+
+
+    \item Show that the voronoi cell of the dual lattice satisfies $$VC(Λ^\ast) =\conv\left( \frac{2}{\Vert z \Vert_2^2} z:z∈Λ\setminus\{ 0 \}\right).$$
+
+
+
+\end{enumerate}
+
+
+%\bibliographystyle{abbrv}
+%\bibliography{books,mybib,papers,my_publications}
+
+
+ 
+\end{document}
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
