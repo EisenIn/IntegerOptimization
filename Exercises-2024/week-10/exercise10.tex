@@ -14,6 +14,8 @@
 \DeclareMathOperator{\vol}{vol}
 \DeclareMathOperator{\Spa}{span}
 
+
+
 \renewcommand{\epsilon}{\varepsilon}
 
 \renewcommand{\leq}{\leqslant}
@@ -26,6 +28,7 @@
 \DeclareMathOperator{\argmin}{\mathrm{argmin}}
 \DeclareMathOperator{\CVP}{\mathrm{CVP}}
 \DeclareMathOperator{\E}{\mathcal{E}}
+\DeclareMathOperator{\V}{\mathcal{V}}
 % \DeclareMathOperator{\conv}{\mathrm{conv}}
 %\DeclareMathOperator{\cone}{\mathrm{cone}}
 %\pagestyle{fancyplain}
@@ -55,18 +58,18 @@
 
   \item Is the Voronoi cell with respect to the $l_\infty$ norm convex? If so, prove it and if not give a counterexample. 
 
-  \item Prove that $V⊆B(0,n\cdotλ_n(Λ))$ where $V$ is the Voronoi cell of the lattice $Λ$.
+  \item Prove that $\V⊆B(0,n\cdotλ_n(Λ))$ where $\V$ is the Voronoi cell of the full-dimensional lattice $Λ⊆ ℝ^n$.
 
-  \item Show that the vertex at which three Voronoi cells $V(p_1), V(p_2), \text{ and } V(p_3)$ intersect is equidistant from all sites $p_1, p_2, p3$. Show that it is the center of the circle passing through these sites, and this circle contains no other sites in its interior.
+  \item Let $P = \{p_1,p_2,p_3\} ⊆ ℝ^n$ be a finite set of three  points. Show that the Voronoi cells $\V(p_1), \V(p_2)$ and $\V(p_3)$ intersect in one point.  Show that this point is equidistant from all points $p_1, p_2, p_3$. Show that it is the center of the circle passing through these ppoints, and this circle contains no other points in its interior.
 
-  \item Given any $n$ points in $\mathbb{R}^2$, show that their Voronoi diaggram has at most $2n-5$ vertices and $3n-6$ edges.
+  \item Given any $n$ points in $\mathbb{R}^2$, show that their Voronoi diagram has at most $2n-5$ vertices and $3n-6$ edges.
 
-  \item Given a set of points $S$, show that the region $V(p)$ is unbounded iff $p$ is an extreme point of $\conv(S)$. 
+  \item Given a set of points $S⊆ ℝ^2$ and $p ∈ S$. Show that the region $\V(p)$ is unbounded if and only if $p$ is an extreme point of $\conv(S)$. 
 
   \item Given $4n$ points in the plane in general position and a line not passing through any of them that has $2n$ points on each side, prove the existence of another line that partitions the plane into $4$ regions, each one with exactly $n$ points.
 
 
-    \item Show that the voronoi cell of the dual lattice satisfies $$VC(Λ^\ast) =\conv\left( \frac{2}{\Vert z \Vert_2^2} z:z∈Λ\setminus\{ 0 \}\right).$$
+    \item Show that the voronoi cell of the dual lattice satisfies $$\V(Λ^\ast) =\conv\left\{ \frac{2}{\Vert z \Vert_2^2} z：z∈Λ\setminus\{ 0 \}\right\}.$$
 
 
 
