@@ -72,6 +72,21 @@
     \item Show that the voronoi cell of the dual lattice satisfies $$\V(Λ^\ast) =\conv\left\{ \frac{2}{\Vert z \Vert_2^2} z：z∈Λ\setminus\{ 0 \}\right\}.$$
 
 
+    \item Let $P = \{ x ∈ ℝ^n : Ax ≤ b \} ⊆ ℝ^n$ be a full-dimensional polytope. An inequality $a^Tx ≤ β$ of $Ax ≤ b$ is \emph{redundant} if the inequalities obtained by  removing $a^Tx ≤ β$ from  $Ax ≤ b$ define the same polytope $P$. Let $A'x ≤b'$ be the result of the removal of  $a^Tx ≤ β$ from $Ax ≤ b$.
+      \begin{enumerate}[i)] 
+      \item Show that  $a^Tx ≤ β$ is redundant if and only if
+        \begin{displaymath}
+          \max\{ a^T x ： x ∈ ℝ^n, \, A'x ≤ b'\} ≤ β.
+        \end{displaymath}
+      \item Show that  $a^Tx ≤ β$ is redundant if and only if there exists $λ ∈ ℝ^{m-1}_{≥0}$ such that
+        \begin{displaymath}
+          a^T = λ^T A' \text{ and } λ^T b' ≤ β. 
+        \end{displaymath}
+        \emph{Hint: Linear programming duality.}
+        \item Show that  $a^Tx ≤ β$ is redundant if and only if the affine dimension of the face $F = \{ x ∈ P ： a^Tx = β\}$ is at most $n-2$, in other words, if and only if  $F$  is not a facet. 
+      \end{enumerate}
+      
+      
 
 \end{enumerate}
 
