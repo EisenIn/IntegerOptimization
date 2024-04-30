@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper]{article}
+\documentclass[11pt,a4paper]{article} 
 \usepackage{fourier,graphicx} 
 \usepackage{amsmath,amsbsy,bm,amssymb,enumerate,mathrsfs}
  
@@ -46,15 +46,34 @@
 
 \maketitle
 \begin{abstract}
-  We complete the proof of the lecture from 29-th of April 2024. The goal is to analyze the LLL-rounding for the closest vector problem. The result is a $2^{O(n)}$-factor approximation. This is also known as Babai's nearest plane algorithm. 
+  \noindent 
+  We complete the proof of the lecture from 29-th of April 2024. The goal is to analyze the LLL-rounding for the closest vector problem. The result is a $2^{O(n)}$-factor approximation. This is also known as Babai's nearest plane algorithm (Babai 1986). 
 \end{abstract}
 
 
-The following can be found in~\cite{babai1986lovasz}. 
+
+\noindent 
+We recall the following. We are given a basis $B ∈ ℚ^{n ×n}$ and a target vector $t ∈ ℚ^n$. The goal is to find a lattice vector $v ∈ Λ(B)$  that is close to $t$. To this end, we suppose that $B$ is LLL-reduced with Gram-Schmidt orthogonalization
+\begin{displaymath}
+  B = \left( b_1^*,\dots,b_n^* \right) ⋅ R
+\end{displaymath}
+where $R∈ ℚ^{n × n}$ is un upper triangular matrix with ones on the diagonal. We let $y^* ∈ ℚ^n$ with $t = B y^*$. In class we have argued that we can find a vector $x ∈ℤ^n$ such that
+\begin{equation}
+  \label{eq:1}
+  \| r_1 =  R (x - y^*)\|_∞ ≤ 1/2. 
+\end{equation}
+Furthermore, if $z ∈ℤ^n$ is a vector different from $x$, then
+\begin{equation}
+  \label{eq:1}
+  \| r_2 = R (z - y^*)\|_∞ ≥ 1/2. 
+\end{equation}
+In particular, the last component of $r_2$ that differs from $r_1$   is at least $1/2$ in absolute value. Let this be component $i$. 
 
 
-\bibliographystyle{alpha}
-\bibliography{mybib,papers,books}
+
+
+%\bibliographystyle{alpha}
+%\bibliography{mybib,papers,books}
 
  
 \end{document}
