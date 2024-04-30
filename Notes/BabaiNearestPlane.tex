@@ -1,0 +1,69 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fourier,graphicx} 
+\usepackage{amsmath,amsbsy,bm,amssymb,enumerate,mathrsfs}
+ 
+% Encoding settings
+\usepackage[utf8]{inputenc} 
+\usepackage{utf8math}
+\usepackage{anysize} 
+
+\newcommand{\smat}[1]{ \big(\begin{smallmatrix} #1 \end{smallmatrix}\big)}
+
+
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\Spa}{span}
+
+\renewcommand{\epsilon}{\varepsilon}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\cone}{cone}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+
+%\pagestyle{fancyplain}
+
+
+
+\title{Babai's nearest plane algorithm}
+
+%\author{ Friedrich Eisenbrand}
+%  \\
+%   EPFL\\
+%   Switzerland\\
+%   {\small \texttt{friedrich.eisenbrand@epfl.ch}}}}
+% } 
+
+
+
+\date{ today}
+
+
+
+\begin{document}
+
+\maketitle
+\begin{abstract}
+  We complete the proof of the lecture from 29-th of April 2024. The goal is to analyze the LLL-rounding for the closest vector problem. The result is a $2^{O(n)}$-factor approximation. This is also known as Babai's nearest plane algorithm. 
+\end{abstract}
+
+
+The following can be found in~\cite{babai1986lovasz}. 
+
+
+\bibliographystyle{alpha}
+\bibliography{mybib,papers,books}
+
+ 
+\end{document}
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
