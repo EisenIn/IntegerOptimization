@@ -67,9 +67,34 @@ Furthermore, if $z ∈ℤ^n$ is a vector different from $x$, then
   \label{eq:1}
   \| r_2 = R (z - y^*)\|_∞ ≥ 1/2. 
 \end{equation}
-In particular, the last component of $r_2$ that differs from $r_1$   is at least $1/2$ in absolute value. Let this be component $i$. 
+In particular, the last component of $r_2$ that differs from $r_1$   is at least $1/2$ in absolute value. Let this be component $i$. We can write
+\begin{displaymath}
+  r_1 = r_1' + u \text{ and }  r_2 = r_2' + u 
+\end{displaymath}
+where $u$ is the \emph{common part} of both vectors, i.e., the common components $i+1,\dots,n$.  We want to show 
+\begin{displaymath}
+ \| B^* r_1  \|^2 ≤ \sqrt{n} 2^{n-1} \| B^* r_2  \|^2. 
+\end{displaymath}
+With Pythagoras, we have
+\begin{displaymath}
+  \| B^* r_i  \|^2 =  \| B^* r'_i  \|^2 +  \| B^* u  \|^2  \text{ for }i=1,2. 
+\end{displaymath}
+Thus it is enough to show 
 
+\begin{displaymath}
+ \| B^* r'_1  \|^2 ≤ 2^{n} \| B^* r'_2  \|^2. 
+\end{displaymath}
+But
+\begin{displaymath}
+  \| B^* r'_2  \|^2 ≥ \frac{1}{4} \|b_i^*\|^2 
+\end{displaymath}
+and
+\begin{displaymath}
+   \| B^* r'_1  \|^2 ≤ \frac{1}{4} ∑_{j=1}^i \|b_j^*\|^2 ≤ n ⋅ 2^{n-1} \|b_i^*\|^2 ,
+\end{displaymath}
+where then last inequality follows from the LL-reduction criterion $\|b_i^*\|^2 ≤ 2 \|b_{i+1}^*\|^2$.
 
+This implies the guarantee. 
 
 
 %\bibliographystyle{alpha}
