@@ -1,0 +1,92 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fourier,graphicx} 
+\usepackage{amsmath,amsbsy,bm,amssymb,enumerate,mathrsfs}
+ 
+% Encoding settings
+\usepackage[utf8]{inputenc} 
+\usepackage{utf8math}
+\usepackage{anysize} 
+
+
+\newcommand{\smat}[1]{ \big(\begin{smallmatrix} #1 \end{smallmatrix}\big)}
+
+
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\Spa}{span}
+
+
+
+\renewcommand{\epsilon}{\varepsilon}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\cone}{cone}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\argmin}{\mathrm{argmin}}
+\DeclareMathOperator{\CVP}{\mathrm{CVP}}
+\DeclareMathOperator{\E}{\mathcal{E}}
+\DeclareMathOperator{\V}{\mathcal{V}}
+% \DeclareMathOperator{\conv}{\mathrm{conv}}
+%\DeclareMathOperator{\cone}{\mathrm{cone}}
+%\pagestyle{fancyplain}
+
+
+
+\title{Integer Optimization  \\ Problem Set 11 }
+
+%\author{ Friedrich Eisenbrand}
+%  \\
+%   EPFL\\
+%   Switzerland\\
+%   {\small \texttt{friedrich.eisenbrand@epfl.ch}}}}
+% } 
+
+
+\date{ May 6, 2024}
+
+
+
+\begin{document}
+
+\maketitle 
+
+
+\begin{enumerate}
+
+  \item Let $a_1 ,\hdots,a_n∈ [0,1]$ be numbers. Show that there exists an $x \in \{-1, 0, +1\}^n \setminus \{0\}$ such that $$\left\vert \displaystyle\sum_{i =1}^n x_i a_i \right\vert \leq \frac{n}{2^n -1}.$$
+
+  \item Let $Λ$ be a lattice and let $Λ_0 ⊂ Λ$ be a sublattice. Prove that $$ρ(Λ) ≤ ρ(Λ_0) ≤ |Λ/Λ_0| \cdot ρ(Λ).$$
+
+  \item Let $P ⊂ \mathbb{R}^d$ be a rational polyhedron and let $v$ be a vertex of $P$. Prove that $v$ has rational coordinates.
+
+  \item Let $P ⊂ \mathbb{R}^d$ be rational polytope. Prove that there exists a positive integer $δ$ such that $δP$ is an integer polytope.
+
+  \item Let $P ⊂ \mathbb{R}^d$ be a rational polyhedron which contains a straight line. Prove that there exists a vector $m ∈ \mathbb{Z}^d \setminus \{0\}$ such that $P + m = P$.
+
+  \item Let $P_1,P_2 ⊂ \mathbb{R}^d$ be polyhedra and let $v_1 ∈ P_1$ and $v_2 ∈ P_2$ be points. Let us define $P_1 × P_2 ⊂ \mathbb{R}^d ⊕ \mathbb{R}^d = \mathbb{R}^{2d}$ by
+$$P_1×P_2= \{(x,y): x∈P_1,y∈P_2\}.$$ 
+Prove that $P = P_1 × P_2$ is a polyhedron
+      
+      
+
+\end{enumerate}
+
+
+%\bibliographystyle{abbrv}
+%\bibliography{books,mybib,papers,my_publications}
+
+
+ 
+\end{document}
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
