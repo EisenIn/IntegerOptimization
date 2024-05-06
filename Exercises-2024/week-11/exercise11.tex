@@ -13,7 +13,7 @@
 
 \DeclareMathOperator{\vol}{vol}
 \DeclareMathOperator{\Spa}{span}
-
+\DeclareMathOperator{\interior}{int}
 
 
 \renewcommand{\epsilon}{\varepsilon}
@@ -56,6 +56,44 @@
 
 \begin{enumerate}
 
+\item Let $K ⊆ ℝ^n$ be a centrally symmetric convex set. Let $u ∈ ℝ^n$ such that
+  \begin{equation}
+    \label{eq:1}    
+    (1/2) ⋅ K  + u ∩ K ≠ ∅.
+  \end{equation}
+  \begin{enumerate}
+  \item Show that $(1/2) ⋅ K  + u ⊆ 2 ⋅K$.
+  \item Let $u_1,\dots,u_k ∈ ℝ^n$ be such that \eqref{eq:1} holds. Furthermore, assume that
+    \begin{displaymath}
+       \left(\frac{1}{2} ⋅ K  + u_i  \right)∩ \left(\frac{1}{2} ⋅ K  + u_j \right)  = ∅ \text{ for all } i≠j.
+         \end{displaymath}
+Show that $k ≤ 4^n$.          
+\end{enumerate}
+
+\item Let $Λ⊆ℝ^n$ be a full-dimensional lattice with Voronoi cell $\mathcal{V}$ and Voronoi relevant vectors $v_1,\dots,v_{2k} ∈ Λ$ and let $K ⊆ ℝ^n$ be a convex body. Consider the following finite graph $G = (V,E)$ with
+  \begin{displaymath}
+    V = \{ v ∈ Λ ： (\mathcal{V} + v ) ∩ K   \text{ is full-dimensional.} \} 
+  \end{displaymath}
+  and
+  \begin{displaymath}
+    E = \{ uv ： u,v ∈ Λ \text{ and } u-v = v_j \text{ for some } j.  \} 
+  \end{displaymath}
+
+  Show that $G$ is connected.
+\item Prove or provide a counterexample: Let $Λ ⊆ ℝ^n$ be a full-dimensional lattice,  $t ∈ ℝ^n$ and $A ∈ ℝ^{ n×n}$ be non-singular. Then $v ∈ Λ$ is a closest vector to $t$ if and only if $A v ∈ A⋅Λ$ is a closest vector to $At$ of the lattice $A ⋅Λ$. 
+  
+\item Let $Λ ⊆ ℝ^n$ be a full-dimensional lattice and $d ∈ Λ^* \setminus \{0\}$ and $β ∈ ℤ$ and $t ∈ ℝ^n$. We consider the problem
+  \begin{displaymath}
+    \min \{ \| v -t \|： v  ∈ Λ, d^T v = β\}. 
+  \end{displaymath} 
+  \begin{enumerate}
+  \item   Describe the target $t^*∈ ℝ^n$  such that this is equivalent to the problem
+    \begin{displaymath}
+      \min \{ \| v -t^* \|： v  ∈ Λ, d^T v = 0\}.
+    \end{displaymath}
+  \end{enumerate}
+
+  
   \item Let $a_1 ,\hdots,a_n∈ [0,1]$ be numbers. Show that there exists an $x \in \{-1, 0, +1\}^n \setminus \{0\}$ such that $$\left\vert \displaystyle\sum_{i =1}^n x_i a_i \right\vert \leq \frac{n}{2^n -1}.$$
 
   \item Let $Λ$ be a lattice and let $Λ_0 ⊂ Λ$ be a sublattice. Prove that $$ρ(Λ) ≤ ρ(Λ_0) ≤ |Λ/Λ_0| \cdot ρ(Λ).$$
