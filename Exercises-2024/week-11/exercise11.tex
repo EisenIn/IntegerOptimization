@@ -59,7 +59,7 @@
 \item Let $K ⊆ ℝ^n$ be a centrally symmetric convex set. Let $u ∈ ℝ^n$ such that
   \begin{equation}
     \label{eq:1}    
-    (1/2) ⋅ K  + u ∩ K ≠ ∅.
+    \left( \frac{1}{2} ⋅ K  + u \right) ∩ K ≠ ∅.
   \end{equation}
   \begin{enumerate}
   \item Show that $(1/2) ⋅ K  + u ⊆ 2 ⋅K$.
@@ -72,25 +72,27 @@ Show that $k ≤ 4^n$.
 
 \item Let $Λ⊆ℝ^n$ be a full-dimensional lattice with Voronoi cell $\mathcal{V}$ and Voronoi relevant vectors $v_1,\dots,v_{2k} ∈ Λ$ and let $K ⊆ ℝ^n$ be a convex body. Consider the following finite graph $G = (V,E)$ with
   \begin{displaymath}
-    V = \{ v ∈ Λ ： (\mathcal{V} + v ) ∩ K   \text{ is full-dimensional.} \} 
-  \end{displaymath}
+    V = \left\{ v ∈ Λ ： \interior \left((\mathcal{V} + v ) ∩ K \right) ≠ ∅  \right\}
+  \end{displaymath}, where $\interior$ refers to the interior 
   and
   \begin{displaymath}
     E = \{ uv ： u,v ∈ Λ \text{ and } u-v = v_j \text{ for some } j.  \} 
   \end{displaymath}
 
   Show that $G$ is connected.
-\item Prove or provide a counterexample: Let $Λ ⊆ ℝ^n$ be a full-dimensional lattice,  $t ∈ ℝ^n$ and $A ∈ ℝ^{ n×n}$ be non-singular. Then $v ∈ Λ$ is a closest vector to $t$ if and only if $A v ∈ A⋅Λ$ is a closest vector to $At$ of the lattice $A ⋅Λ$. 
+\item Prove or provide a counterexample: Let $Λ ⊆ ℝ^n$ be a full-dimensional lattice,  $t ∈ ℝ^n$ and $A ∈ ℝ^{ n×n}$ be non-singular. Then $v ∈ Λ$ is a closest vector to $t$ if and only if $A v ∈ A⋅Λ$ is a closest vector to $At$ in the lattice $A ⋅Λ$. 
   
 \item Let $Λ ⊆ ℝ^n$ be a full-dimensional lattice and $d ∈ Λ^* \setminus \{0\}$ and $β ∈ ℤ$ and $t ∈ ℝ^n$. We consider the problem
-  \begin{displaymath}
+  \begin{equation}
+    \label{eq:2}
     \min \{ \| v -t \|： v  ∈ Λ, d^T v = β\}. 
-  \end{displaymath} 
+  \end{equation}
   \begin{enumerate}
-  \item   Describe the target $t^*∈ ℝ^n$  such that this is equivalent to the problem
+  \item   Describe a target $t^*∈ ℝ^n$  such that this is equivalent to the problem
     \begin{displaymath}
       \min \{ \| v -t^* \|： v  ∈ Λ, d^T v = 0\}.
     \end{displaymath}
+  \item Describe a lattice $Λ' ⊆ ℝ^{n-1}$ and a target $t' ∈ ℝ^{n-1}$ such that the corresponding CVP is equivalent to~\eqref{eq:2}. 
   \end{enumerate}
 
   
