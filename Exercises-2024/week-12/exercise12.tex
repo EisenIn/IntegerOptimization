@@ -12,6 +12,7 @@
 
 
 \DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\poly}{poly}
 \DeclareMathOperator{\Spa}{span}
 \DeclareMathOperator{\interior}{int}
 
@@ -56,6 +57,76 @@
 
 \begin{enumerate}
 
+\item Let $A ∈ ℤ^{ m ×n}$ be an integer matrix and $b ∈ ℤ^m$ and consider the feasibility problem 
+  \begin{equation}
+    \label{eq:1}
+    Ax = b, \quad x ∈ \{0,1\}^n.  
+  \end{equation}
+  Let $λ ∈ \{0,\dots,M\}^m$ be chosen i.i.d. at random and consider the feasibility problem 
+  \begin{equation}
+    \label{eq:2}
+    (λ^TA)\,  x = (λ^Tb), \quad x ∈ \{0,1\}^n 
+  \end{equation}
+  that is defined by one equation only. Let $S_1 ⊆ \{0,1\}$ be the solutions of~\eqref{eq:1} and $S_2 ⊆ \{0,1\}$ be the solutions of~\eqref{eq:2}.
+  \begin{enumerate}
+  \item Let $x^* ∈ \{0,1\}^n$. Show that $x^* ∈ S_2$ if and only if
+    \begin{displaymath}
+      λ^T (A x^* - b) = 0.
+    \end{displaymath}
+  \item Let $v ∈ℤ^n \setminus \{0\}$. Show that
+    \begin{displaymath}
+      P\left[ λ^T v = 0\right] ≤ 1/M 
+    \end{displaymath}  
+  \item Let $Δ$ be the largest absolute value of a component of $A$.  Prove that
+    \begin{displaymath}
+      P \left[ S_2 ≠ S_1\right] ≤ (2 ⋅ n ⋅ Δ +1)^m / M
+    \end{displaymath}
+\hfill     \emph{Hint: How large is the set $\{Ax - b ： x ∈ \{0,1\}^n \}$?} 
+  \item Provide a lower bound on $M$ such that
+     \begin{displaymath}
+      P \left[ S_2 ≠ S_1\right] ≤  1/2
+    \end{displaymath}
+    holds. 
+  \end{enumerate}
+\item $A ∈ ℤ^{ m ×n}$ be a nonzero integer matrix and $b ∈ ℤ^m$ and consider the feasibility problem 
+  \begin{equation} 
+    \label{eq:3}
+    Ax = b, \quad x ∈ \{0,1\}^n.  
+  \end{equation}
+  Show that \eqref{eq:3} is equivalent to a feasibility problem
+  \begin{displaymath}
+    A'x = b', x≥0, \quad x ∈ ℤ^n.    
+  \end{displaymath}
+  such that the following conditions hold:
+  \begin{enumerate}[i)] 
+  \item $A' ∈ℤ^{ (m+n) ×2⋅n}$. 
+  \item $\|A' \|_∞ ≤  \|A\|_∞$.
+  \item The maximum number of nonzero elements in any row of $A'$ is
+    bounded by the maximum of $2$ and the maximum number of nonzero
+    elements of any row of $A$.
+  \end{enumerate}
+
+\item The \emph{Exponential Time Hypothesis} states that there exists an $ε>0$ such that   $3$-SAT  with $n$ variables cannot be solved in time $2^{ε ⋅n}$. Via the \emph{sparsification lemma} this implies that there exists an $ε>0$ such that   $3$-SAT  with $n$ variables and $O(n)$ clauses cannot be solved in time $2^{ε ⋅n}$.  We will use the latter assumption in this exercise. To this end, let $Φ$ be a $3$-SAT formula with $n$ variables and $O(n)$ clauses. 
+  \begin{enumerate}
+  \item Describe a feasibility problem of the form
+    \begin{displaymath}
+      Ax = b, x≥0, \, x ∈ ℤ^n 
+    \end{displaymath}
+    where $A ∈ \{ \pm 1,0 \}^{O(n) × O(n)}$ that is equivalent to the given satisfiability problem $Φ$. 
+  \item  Find an equivalent system
+    \begin{displaymath}
+      A'x = b', x≥0, \, x ∈ ℤ^n 
+    \end{displaymath}
+    where $A' ∈ ℤ^{O(n / \log n) × O(n)}$ and $\|A'\|_∞ ≤\poly (n)$.
+  \item Show that there cannot be an algorithm that solves the integer feasibility problem
+    \begin{displaymath}
+      Ax = b, \, x≥ 0, \, x ∈ℤ^n, 
+    \end{displaymath}
+    where $A ∈ ℤ^{m ×n}$, $\|A\|_∞ ≤Δ$ in time $ (2 ⋅m ⋅Δ)^{m / \log m}$. 
+    
+  \end{enumerate}
+  
+  
 \item Let $P$ and $Q$ be two simple polygons in $\mathbb{R}^2$, where $P$ has $m$ vertices and $Q$ has $n$ vertices. What is the maximum number of vertices on the boundary of the Minkowski sum $P ⊕ Q$ (asymptotically) assuming:
 \begin{enumerate}
     \item $P$ and $Q$ are both convex
