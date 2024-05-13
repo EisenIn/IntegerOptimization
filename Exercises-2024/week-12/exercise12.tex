@@ -56,7 +56,31 @@
 
 
 \begin{enumerate}
+\item Describe the directed acyclic graph in Papadimitrious algorithm for the integer optimization problem
+  \begin{displaymath}
+    \begin{array}{c}
+      \max 2 ⋅x_1 + 1 ⋅ x_2 + 3 ⋅x_3 \\ \\ 
+      \begin{pmatrix}
+        2 & 0 & 1\\
+        1 & 1 & 1
+      \end{pmatrix} ⋅x =
+                \begin{pmatrix}
+                  2 \\ 2
+                \end{pmatrix}, \quad  x ∈ℤ_{≥0}^3. 
 
+    \end{array}
+  \end{displaymath}
+  Find the longest path. 
+\item Let $A ∈ ℤ^{ m ×n}$ be an integer matrix, $c ∈ ℤ^n$  and $b ∈ ℤ^m$ such that $\|A\|_∞ ≤ Δ$ and $\|b\|_∞ ≤ Δ$. Show that, if the optimization problem 
+  \begin{displaymath}    
+    \begin{array}{c}
+    \max c^Tx \\ 
+      Ax = b, \quad x ∈ \{0,1\}^n.      
+    \end{array}
+  \end{displaymath}
+  has a solution, then it has a solution $x^*$ with $\|x^*\| = (mΔ)^{O(m)}$.
+
+  
 \item Let $A ∈ ℤ^{ m ×n}$ be an integer matrix and $b ∈ ℤ^m$ and consider the feasibility problem 
   \begin{equation}
     \label{eq:1}
@@ -135,22 +159,22 @@ $t_{ij}$ required to perform the work on item $i$ by machine $j$ are known and a
     \item Suppose we want the items to be processed in the same sequence on each machine. Change the formulation accordingly.
 \end{enumerate}
 
-\item Let $A$ be a totally unimodular matrix in $\mathbb{R}^{m \times n}$ with rows $A_1, \hdots, A_m$. Let $\delta$ be the maximal value such that for every choice of $n$ rows $A_{i1}, \hdots, A_{in}$ either 
-\begin{enumerate}
-    \item $A_{in} \in \text{span}(A_{i1}, \hdots, A_{i(n-1)})$ or 
-    \item $\text{dist}(A_{in}, \text{span}(A_{i1}, \hdots, A_{i(n-1)})) \geq \delta$. 
-\end{enumerate}
-Show that $\delta \geq \frac{1}{n}$. 
+% \item Let $A$ be a totally unimodular matrix in $\mathbb{R}^{m \times n}$ with rows $A_1, \hdots, A_m$. Let $\delta$ be the maximal value such that for every choice of $n$ rows $A_{i1}, \hdots, A_{in}$ either 
+% \begin{enumerate}
+%     \item $A_{in} \in \text{span}(A_{i1}, \hdots, A_{i(n-1)})$ or 
+%     \item $\text{dist}(A_{in}, \text{span}(A_{i1}, \hdots, A_{i(n-1)})) \geq \delta$. 
+% \end{enumerate}
+% Show that $\delta \geq \frac{1}{n}$. 
 
-\item A set $S$ is in isotropic position if for a random point $x ∈ S$, \begin{enumerate}
-    \item $\mathbb{E}[x] = 0 $
-    \item $\forall v \in \mathbb{R}^n, \mathbb{E}[(v^Tx)^2] = \Vert v \Vert^2$
-\end{enumerate}
-Prove the following two claims:
-\begin{enumerate}[(i)]
-    \item $x \in S$ satisfies the above conditions if and only if $\mathbb{E}[xx^T ] = I$.
-    \item Any convex set can be put in isotropic position by an affine transformation.
-\end{enumerate}
+% \item A set $S$ is in isotropic position if for a random point $x ∈ S$, \begin{enumerate}
+%     \item $\mathbb{E}[x] = 0 $
+%     \item $\forall v \in \mathbb{R}^n, \mathbb{E}[(v^Tx)^2] = \Vert v \Vert^2$
+% \end{enumerate}
+% Prove the following two claims:
+% \begin{enumerate}[(i)]
+%     \item $x \in S$ satisfies the above conditions if and only if $\mathbb{E}[xx^T ] = I$.
+%     \item Any convex set can be put in isotropic position by an affine transformation.
+% \end{enumerate}
 
 
 
